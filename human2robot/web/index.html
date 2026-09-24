@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Human → Robot · 轨迹验证工作台</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div style="padding:14px 5%;background:#dfeee3;color:#224333"><a style="color:inherit;font-weight:700" href="v2.html">第二轮：双手、全身、物体标注与 RoboTwin 闭环对照 →</a></div>
+<header><a class="brand" href="#"><span class="brand-mark">h→r</span> Human to Robot <small>研究原型 / 0.1</small></a><nav aria-label="页面导航"><a href="#workspace">转换样例</a><a href="#pipeline">处理方案</a><a href="#experiments">训练验证</a></nav><span class="private-label">本地研究 · 未发布</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">RGB VIDEO → ANNOTATION → REFERENCE TRAJECTORY</p><h1>人类的动作，<br>怎样成为机器人的学习信号？</h1><p class="intro">逐帧查看原始证据、轨迹修复、夹爪目标与关节求解。成功转换、失败案例和未验证的假设，都保留在这里。</p></div><div class="hero-note"><span class="live-dot"></span><strong>证据先于结论</strong><p>真实视频的估计轨迹 ≠ 真机动作标签。<br>仿真微调收益 ≠ 已证明能替代真机数据。</p><div id="counts" class="counts">加载本次运行结果…</div></div></section>
+<section id="workspace" class="workspace"><div class="section-head"><div><p class="eyebrow">01 / CASE REVIEW</p><h2>从一个具体样例开始</h2></div><div class="filter-group" aria-label="样例类型"><button class="filter active" data-filter="all" aria-pressed="true">全部</button><button class="filter" data-filter="human_video" aria-pressed="false">真实人类视频</button><button class="filter" data-filter="synthetic" aria-pressed="false">合成验证</button><button class="filter" data-filter="rejected_robot_video" aria-pressed="false">来源拒绝</button></div></div>
+<div class="review-layout"><aside><div class="aside-heading">样例库 <span id="case-count"></span></div><div id="case-list" class="case-list" role="list"></div></aside>
+<article class="review"><div class="review-heading"><div><span id="kind" class="tag"></span><h3 id="case-title">正在加载</h3><p id="case-description"></p></div><a id="download" class="button secondary" download>查看标注 JSON ↗</a></div>
+<div id="claim" class="notice"></div>
+<div class="visual-grid"><section class="visual-panel"><div class="panel-label"><span id="source-title">01 原始观测与关键点</span><span id="hand-status"></span></div><div id="source-stage" class="stage"><video id="source-video" muted playsinline preload="metadata"></video><canvas id="overlay" aria-label="原始画面与检测的手部关键点"></canvas><canvas id="human-scene" aria-label="合成手部与夹爪目标"></canvas></div><div class="panel-caption" id="source-caption"></div></section>
+<section class="visual-panel"><div class="panel-label"><span>02 夹爪目标 → 机器人关节</span><span id="robot-status"></span></div><div class="stage"><canvas id="robot-scene" aria-label="机械臂运动学回放"></canvas><div id="no-robot" hidden>非人类视频，不进入人手重定向</div></div><div class="panel-caption"><span class="legend-dot target"></span>目标 <span class="legend-dot actual"></span>FK 计算末端 <span class="muted">仅运动学示意</span></div></section></div>
+<div class="timeline"><button id="play" class="button" aria-label="播放或暂停轨迹">播放</button><input id="frame" type="range" min="0" max="0" value="0" aria-label="选择视频帧"><span id="time" class="mono">0.00 s</span></div>
+<div class="metrics"><div><span>有观测的帧</span><strong id="m-observed">—</strong></div><div><span>发生修复的帧</span><strong id="m-repair">—</strong></div><div><span>几何检查通过</span><strong id="m-geometry">—</strong></div><div><span>真实机器人训练准入</span><strong id="m-training">—</strong></div></div>
+<section class="plot-section"><div class="panel-label"><span>轨迹对比 · 参考坐标 Y（估计毫米；真实视频相机未补偿）</span><div class="legend"><span class="raw">— 原始</span><span class="fixed">— 修复</span><span class="truth">— 合成真值（如有）</span></div></div><canvas id="trajectory" aria-label="原始与修复轨迹对比"></canvas></section>
+<div class="detail-grid"><section><h4>这一帧发生了什么</h4><div id="frame-detail"></div></section><section><h4>训练准入与限制</h4><div id="quality-list"></div></section></div>
+</article></div></section>
+<section id="pipeline" class="plan-section"><div class="section-head"><div><p class="eyebrow">02 / PIPELINE</p><h2>每一步都说明：输入、输出、依据</h2></div><span class="muted">实现范围见下方状态</span></div>
+<div class="pipeline-grid">
+<div><b>01</b><h3>读取 RGB</h3><p>验证解码、时间戳与来源。只读取人类视频，不读取设备记录的手部动作。</p><span class="status done">已运行 · EPIC RGB</span></div>
+<div><b>02</b><h3>提取手部证据</h3><p>21 个关键点、连续身份、左右手模型输出。MediaPipe 局部三维结合 PnP，保留相机内参和尺度假设。</p><span class="status done">已运行 · CPU 模型</span></div>
+<div><b>03</b><h3>统一与修复</h3><p>显式相机变换、稳健位置优化、短缺失旋转插值。身份切换、阶段边界和长遮挡不跨越。</p><span class="status done">已实现 · 合成真值验证</span></div>
+<div><b>04</b><h3>手 → 夹爪候选</h3><p>拇指、食指确定候选中心与闭合轴，掌部方向确定接近轴。候选不等于已验证的物体接触。</p><span class="status partial">已实现候选 · 接触待验证</span></div>
+<div><b>05</b><h3>求机器人关节</h3><p>加载 URDF，使用位置、朝向、限位、速度与代理碰撞约束求 IK。允许不可达，保存失败原因。</p><span class="status done">已运行 · 6 自由度参考臂</span></div>
+<div><b>06</b><h3>形成训练窗口</h3><p>未来参考轨迹、有效掩码、来源分组与尾部过滤。人体辅助监督和机器人动作监督分开导出。</p><span class="status done">已实现 · 严格准入</span></div>
+</div><div class="boundary-note"><strong>尚需接入：</strong>可靠相机轨迹 / 尺度标定、物体三维与接触估计、真实本体碰撞模型、动力学回放。现有网页不声称这些已经完成。</div></section>
+<section id="experiments" class="experiment-section"><div class="section-head"><div><p class="eyebrow">03 / EXPERIMENTS</p><h2>人类数据究竟有没有被利用？</h2></div><span id="training-status" class="tag">训练结果待生成</span></div>
+<div class="experiment-grid"><div class="experiment-card"><span>显式路线</span><h3>视频 → 运动标签 → 预训练</h3><p>让视觉编码器预测未来手部运动。使用有效标签掩码，并设置错误标签对照。</p><ul><li>正确的人类运动标签</li><li>打乱对应关系的运动标签</li><li>下一阶段：等计算量机器人-only 对照</li></ul></div><div class="experiment-card"><span>隐式路线</span><h3>视频 → 未来画面 → 预训练</h3><p>不显式恢复三维轨迹。先用同一视觉编码器预测未来低分辨率画面，再适配机器人动作。</p><ul><li>使用相同来源视频与训练步数</li><li>对照当前画面复制基线</li><li>再做统一的 RoboTwin 微调</li></ul></div><div class="experiment-card"><span>需要回答的问题</span><h3>效果来自人类信息，还是多训了几步？</h3><p>固定模型、计算预算、机器人样本暴露量；分别报告每种控制条件。</p><ul><li>样本读取、有效 loss、梯度、参数变化</li><li>同任务 Easy / Hard 闭环成功率</li><li>真机替代率须另有真机留出评测</li></ul></div></div>
+<div id="training-results" class="training-results">本地的几何与数据通路验证不构成学习效果结论。训练完成后，此处读取实际产生的结果文件。</div>
+<div class="reading"><a href="../docs/验证结果.md">本轮验证结果 ↗</a><a href="../docs/方案.md">完整方案 ↗</a><a href="../docs/实验与资源.md">实验与资源计划 ↗</a><a href="../README.md">复现步骤 ↗</a></div>
+</section>
+</main><footer><span>Human to Robot / 可追溯、可复现、允许失败</span><span id="generated-at"></span></footer>
+<script src="app.js"></script></body></html>

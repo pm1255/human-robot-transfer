@@ -1,5 +1,9 @@
 [
   {
+    "path": "VALIDATION.md",
+    "sha256": "d07e6c16fd0486471ffca6554af4324d829b78d6cdf87f4a6ed97fad96a3c9cf"
+  },
+  {
     "path": "README.md",
     "sha256": "af442884804cdd96d4bfd9115c616e3f0cbda1df7eef1c4728ff4c8a2ce20838"
   },
@@ -76,6 +80,10 @@
     "sha256": "4473960671d004c6092bfab610568b2778eb2ad31d2c9fdfccc69053dd7a53f6"
   },
   {
+    "path": "tools/build_showcase.py",
+    "sha256": "c7d39e010d0b8dd87c2098c1b61658df415af7562991853d3871c94b664d2eaf"
+  },
+  {
     "path": "human2robot/pyproject.toml",
     "sha256": "d6a4cf4a20c009b6d664c86b750cf3d8ccd9495ba2533d4817075633587df20d"
   },
@@ -122,6 +130,42 @@
   {
     "path": "human2robot/h2r/schema.py",
     "sha256": "c4e01fd4c916bad6cd085f941ab4478a91512268bb21b620ac1688fb525ea89b"
+  },
+  {
+    "path": "human2robot/web/index.html",
+    "sha256": "ab301cd12d5ec25e9d0463815be237213f8333f20707655ef052871edfa2cbd8"
+  },
+  {
+    "path": "human2robot/web/styles.css",
+    "sha256": "d41de1008c1bc4da3bd31b5b717255f17470ad0040281b3821dfa0ca6d5b8e57"
+  },
+  {
+    "path": "human2robot/web/v2.html",
+    "sha256": "335a80dae922794d221520bb826ca22251c715879e4f1870204c94e2595dd6f3"
+  },
+  {
+    "path": "human2robot/web/v2-details.js",
+    "sha256": "63aaff2f651bb3ccadafbfef8f5749734c8a9a34ea327daa448749f207ace625"
+  },
+  {
+    "path": "human2robot/web/v2.js",
+    "sha256": "bae5e80c395300d23d6df47ebe9d4673b724746beafd87a90597f57f6fe00551"
+  },
+  {
+    "path": "human2robot/web/v2.css",
+    "sha256": "97e4c37743e18ead1e3f556302a7aa58313f3077b21e719bdb9d8dfcab984b51"
+  },
+  {
+    "path": "human2robot/web/v2-experiment.js",
+    "sha256": "5504fbc99b80a078d46ec78f1d6b3fb97c8adc4ea8df4a23f16fdb7a9686d93b"
+  },
+  {
+    "path": "human2robot/web/app.js",
+    "sha256": "cb17217aa952824f4cdff901700fb3ac9c16724ef7833371906db44de9f38ea2"
+  },
+  {
+    "path": "human2robot/web/v2-robot.js",
+    "sha256": "1a597883bde2b8fe15fadee065d779cc0c74629abbb942e933c5d1bdf4c5ff8b"
   },
   {
     "path": "human2robot/tests/test_surface_render.py",
@@ -458,5 +502,41 @@
   {
     "path": "human2robot/scripts/correct_proxy_timestamps.py",
     "sha256": "63c22a5d56524e210ef704a8708f1cb0bb558832595e5a25482bf76c1878790e"
+  },
+  {
+    "path": "website/compare.html",
+    "sha256": "973225997f4709400b0f5a6c98df5467e785dd7dc9526a19c83b81761028ea74"
+  },
+  {
+    "path": "website/index.html",
+    "sha256": "0a96043940a52a2f1a22a0256203a82dc4b3e6f9a3e6af3b1014d0c7635d8c81"
+  },
+  {
+    "path": "website/examples.json",
+    "sha256": "919e15b92d8aa37a2793e3c8d14cf35d1e79136dbc316064061b07ed6c187cc7"
+  },
+  {
+    "path": "website/gallery.css",
+    "sha256": "8004a5508eac9018a168c1562388ad3481dfb1a91b4b30befc5b838112fd1ff7"
+  },
+  {
+    "path": "website/gallery.js",
+    "sha256": "910efa4f18ccbb9c926f3ce3be566c57d750a57b3243badb2df2e1ca67642cb0"
+  },
+  {
+    "path": "website/README.md",
+    "sha256": "a5b364e799f99179097d1f60c427db5094925c818d6bc178c32c17b45e4bc5dc"
+  },
+  {
+    "path": "website/style.css",
+    "sha256": "b6bb7bcced1004ef0166b5dddb8bb5a36fe1bd552ddb22f55476d911cfc7387b"
+  },
+  {
+    "path": "website/app.js",
+    "sha256": "d9722d828be4f5374f7c8ec50693d5af7d32b18127b4a075d1dd3c0c18c87541"
+  },
+  {
+    "path": "website/showcase.json",
+    "sha256": "8d07be1d4cf513901ea107ca9bc7f5041adce3d3957064090a985594f8ded20d"
   }
 ]

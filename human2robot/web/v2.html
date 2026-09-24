@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Human → Robot · 证据与闭环</title>
+    <link rel="stylesheet" href="v2.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">H₂R / 第二轮实验</a>
+      <nav>
+        <a href="#evidence">视频标注</a><a href="#benchmark">闭环与动作</a
+        ><a href="#conversion">画面转换</a
+        ><a href="#training-details">训练细节</a
+        ><a href="#retarget">重定向回放</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">RGB HUMAN VIDEO → ROBOT LEARNING</div>
+        <h1>先看见动作，<br />再验证是否学会。</h1>
+        <p>
+          双手、人体、物体，保留每一层观测证据。用相同机器人数据微调，以任务成功率检验人类视频的价值。
+        </p>
+        <div class="toolbar">
+          <a href="#execution-evidence">▶ 查看机械臂实际执行录像</a
+          ><a href="#retarget">查看人类 → Aloha 实体机械臂同步动画</a>
+        </div>
+        <div class="stats" id="stats">正在读取实测结果…</div>
+        <div class="note">
+          局部 3D ≠ 世界轨迹 · 模型左右手未人工核实 · 物体框 ≠ 接触关系 ·
+          原始视频中缺失的全身不补画
+        </div>
+      </section>
+      <section id="conversion">
+        <div class="eyebrow">RGB → ROBOT APPEARANCE / VISUAL PREVIEW</div>
+        <h2>原画中的人和手，替换成机器人之后</h2>
+        <p>
+          三栏同步视频：左边原始
+          RGB，中间是实际删除区域，右边是机器人替换结果。既展示全身人形，也展示手臂与两指夹爪；可暂停检查同一帧。
+        </p>
+        <div class="note">
+          这是新增的几何合成预览，不是视频生成模型，也没有用于当前策略训练。背景采用单帧
+          OpenCV Telea
+          修补；人体/手臂掩码是启发式估计。没有可靠场景深度，因此遮挡、物体接触和背景时序一致性尚未通过质检。所有转换片段的训练准入为
+          0。
+        </div>
+        <div class="toolbar">
+          <select id="conversioncase" aria-label="画面转换例子"></select
+          ><a id="conversiondownload" download>下载当前对比视频</a
+          ><a id="conversionaudit">逐帧参数与来源</a>
+        </div>
+        <video id="conversionvideo" controls playsinline></video>
+        <p id="conversioninfo"></p>
+        <p>
+          <a href="../docs/画面转换验证.md">转换方法与验证边界</a> ·
+          <a href="../outputs/v2/conversion_audit.json">导出一致性检查报告</a>
+        </p>
+        <details>
+          <summary>画面替换到底做了什么？哪些没有完成？</summary>
+          <p>
+            手臂：使用 RoboTwin Aloha / AgileX ARX5 的 URDF
+            重新求解，再把实体网格投影到原视频。仅替换选中的一只手；机器人是真实型号的数字模型，材质为近似，尚无真实相机标定与遮挡修复。
+          </p>
+          <p>
+            全身：MediaPipe 身体局部 3D → 按 G1 连杆长度构造目标 →
+            有关节范围约束的逐帧 IK → G1 原始表面网格渲染 →
+            弱透视对齐原画。头固定在躯干，没有添加不存在的颈部自由度。不是
+            GVHMR/GMR 的复现，没有世界轨迹标定、完整碰撞或平衡控制。
+          </p>
+          <p>
+            中栏能暴露漏删人体、误删物体的问题；右栏可能残留人体轮廓、出现背景涂抹和脚部漂移。视觉替换与机器人动作可执行性需要分别验收，不能因为画面里出现机器人就作为
+            VLA 动作真值。
+          </p>
+        </details>
+      </section>
+      <section id="training-details">
+        <div class="eyebrow">MODEL IDENTITY / TRAINING RECIPE</div>
+        <h2>到底训练了谁，训练了多少步</h2>
+        <div id="modelidentity"></div>
+        <div id="trainingrecipe"></div>
+        <div class="card">
+          <h3>实际训练日志：同一目标看收敛</h3>
+          <div class="toolbar">
+            <select id="trainingrun" aria-label="训练条件"></select
+            ><select id="trainingloss" aria-label="损失类型">
+              <option value="action_loss">归一化机器人动作 MSE</option>
+              <option value="motion_loss">归一化人类二维运动 MSE</option>
+              <option value="image_loss">未来 RGB 残差 MSE</option>
+            </select>
+          </div>
+          <div class="legend">
+            <span style="--swatch: #167b64">绿线：所选组的训练损失</span
+            ><span class="dashed" style="--swatch: #a67938"
+              >棕色虚线：2,000 步阶段切换</span
+            >
+          </div>
+          <canvas id="trainingcurve" width="1000" height="300"></canvas>
+          <p id="trainingcurveinfo"></p>
+        </div>
+        <div id="trainingconclusion" class="note"></div>
+        <p>
+          <a href="../docs/模型身份与训练明细.md">完整模型身份与配置</a> ·
+          <a href="../docs/V2实验协议.md">实验协议</a>
+        </p>
+      </section>
+      <section id="evidence">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">01 / ANNOTATION EVIDENCE</div>
+            <h2>把成功与缺失都展示出来</h2>
+          </div>
+          <select id="filter">
+            <option value="all">全部真实视频</option>
+            <option value="two">检测到双手</option>
+            <option value="body">有全身可见帧</option>
+            <option value="ego">第一人称</option>
+            <option value="exo">第三人称</option>
+            <option value="bottle">检测到瓶子</option>
+          </select>
+        </div>
+        <div class="review">
+          <aside id="gallery"></aside>
+          <article>
+            <div class="video-wrap">
+              <video id="video" controls playsinline></video
+              ><canvas id="overlay"></canvas>
+            </div>
+            <div class="toolbar">
+              <label
+                ><input id="hands" type="checkbox" checked /> 双手 / ID</label
+              ><label><input id="body" type="checkbox" checked /> 人体</label
+              ><label><input id="objects" type="checkbox" checked /> 物体</label
+              ><label
+                ><input id="headpoints" type="checkbox" /> 头部 11 点编号</label
+              ><button id="best">跳至证据最多的帧</button>
+            </div>
+            <h3 id="title"></h3>
+            <p id="caption"></p>
+            <div class="card">
+              <h3>每一帧为什么有点、为什么没有点</h3>
+              <canvas
+                id="coverage"
+                width="1000"
+                height="156"
+                aria-label="逐帧标注覆盖，点击跳转"
+              ></canvas>
+              <small
+                >点击时间条跳帧。青色：有手；浅色：部分可见人体点；绿色：全身候选；橙色：原始人体输出被来源质检剔除；灰色：无输出。这里的空白不是已确认的漏检。</small
+              >
+              <div id="diagnosis"></div>
+              <details>
+                <summary>检测上限、隐藏规则与头部点的含义</summary>
+                <p>
+                  本轮配置最多 1 个人、总共 2
+                  只手。多人不会完整标注；两只手也未与某个身体建立归属关系。模型无输出的帧，现有日志不能进一步判定是遮挡、出画、模糊还是检测失败，需对照原画核查。
+                </p>
+                <p>
+                  人体点 visibility 和 presence 都大于 0.6
+                  且在画面内才绘制；模型检测/存在阈值为人体 0.4、手部
+                  0.3。第一人称素材的全身预测被保守质检剔除，原始输出仍保留。当前展示不插值补点；训练未来运动标签还要求连续
+                  0.5 秒同 ID 可用，要求比单帧显示更严格。
+                </p>
+                <p>
+                  身体模型共 33 点，其中头部 0–10 共 11 点：鼻子 1、双眼各
+                  3、双耳各 1、嘴角
+                  2。这些是视觉定位点，不是机械转动关节。每手另有 21
+                  点，含与身体模型重复的手腕等位置。当前机器人输出 12
+                  个臂关节角和 2 个夹爪值，没有头部动作。
+                </p>
+                <p>
+                  头部点能辅助估计朝向，但本页没有拟合头部旋转。身体局部 3D
+                  也不能直接当作机器人关节角。手上的 score
+                  是左右手分类得分，不能当成 21 点精度。
+                </p>
+                <a
+                  href="https://developers.google.com/edge/mediapipe/solutions/vision/pose_landmarker"
+                  >MediaPipe 官方人体定义</a
+                >
+                ·
+                <a
+                  href="https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker"
+                  >手部定义</a
+                >
+              </details>
+            </div>
+            <div class="columns">
+              <div>
+                <div class="eyebrow">当前帧模型检测</div>
+                <div id="frameinfo"></div>
+                <label class="toolbar"
+                  >3D 转角
+                  <input
+                    id="yaw"
+                    type="range"
+                    min="-180"
+                    max="180"
+                    value="25" /></label
+                ><canvas id="local3d" width="400" height="250"></canvas
+                ><small
+                  >身体局部
+                  3D，可旋转查看；仅显示可见点；不是相机运动或世界轨迹。</small
+                >
+              </div>
+              <div>
+                <div class="eyebrow">片段审计</div>
+                <div id="audit"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="retarget">
+        <div class="eyebrow">02 / 看人手怎样驱动真实机器人模型</div>
+        <h2>左边看人，右边看 Aloha 机械臂</h2>
+        <p class="howto">
+          ① 选一个片段　→　② 点击同步播放　→　③
+          看右侧夹爪跟随目标运动。拖动机器人可以换角度，拖动时间条可以逐帧检查。
+        </p>
+        <div class="note">
+          这里使用 RoboTwin 的 Aloha / AgileX ARX5 从臂 URDF
+          和实体网格，并重新求解关节角。展示的是该真实机器人的数字模型，尚未在硬件上执行。原视频与机器人空间采用首帧示意对齐。
+        </div>
+        <div class="toolbar">
+          <select id="retargetcase" aria-label="重定向案例"></select
+          ><button id="retargetplay">播放同步回放</button
+          ><input
+            id="retargetframe"
+            aria-label="重定向时间"
+            type="range"
+            min="0"
+            value="0"
+          /><span id="retargettime"></span>
+        </div>
+        <div class="columns retarget-columns">
+          <article class="card">
+            <h3>① 人类原视频</h3>
+            <div class="video-wrap">
+              <video id="retargetvideo" controls playsinline></video
+              ><canvas id="retargetoverlay"></canvas>
+            </div>
+            <div id="syntheticnotice" class="note" hidden>
+              这个片段是程序生成的压力测试，没有真人视频。右侧显示同一目标输入下的
+              Aloha 运动。
+            </div>
+            <label
+              ><input id="showhand" type="checkbox" checked />
+              显示手部检测点</label
+            >
+            <div class="legend">
+              <span style="--swatch: #80cdb9">青色连线：人手骨架</span
+              ><span style="--swatch: #dfb635">黄色点：人手检测点</span>
+            </div>
+            <p id="retargetsourceinfo"></p>
+          </article>
+          <article class="card">
+            <h3>② Aloha / AgileX 实体机械臂</h3>
+            <div class="toolbar">
+              <button data-robot-view="three">立体视角</button
+              ><button data-robot-view="front">正面</button
+              ><button data-robot-view="side">侧面</button
+              ><label
+                ><input id="showpath" type="checkbox" /> 展开目标轨迹</label
+              >
+            </div>
+            <div id="retargetrobot"></div>
+            <small id="robotload">正在加载真实机器人网格…</small>
+            <div class="legend">
+              <span style="--swatch: #e37b20">橙色球框：希望夹爪到的位置</span
+              ><span style="--swatch: #e05293"
+                >粉色点与标签：下方正在查看的关节</span
+              ><span style="--swatch: #13a1c2">蓝色球：逆解后夹爪实际位置</span>
+            </div>
+            <p>
+              两个球越接近，位置拟合越好。实体夹爪的开合来自估计值，尚未验证抓住物体。台面网格每格
+              10 cm。
+            </p>
+            <div id="retargetinfo"></div>
+          </article>
+        </div>
+        <details class="card" open>
+          <summary>③ 关节到底转了多少？一次看一个关节</summary>
+          <div class="toolbar">
+            <label for="retargetjoint">选择关节</label
+            ><select id="retargetjoint"></select>
+          </div>
+          <div class="legend">
+            <span style="--swatch: #16829d">蓝线：Aloha 求解角度</span
+            ><span class="dashed" style="--swatch: #1e2936"
+              >黑色虚线：视频当前时刻</span
+            >
+          </div>
+          <canvas id="retargetplot" width="1000" height="300"></canvas>
+          <p id="retargetchartread"></p>
+          <p id="retargetsummary"></p>
+        </details>
+      </section>
+      <section id="benchmark">
+        <div class="eyebrow">03 / MATCHED EXPERIMENT</div>
+        <h2>先比较任务成功，再解释动作误差</h2>
+        <p>
+          四组同一机器人数据划分、初始化和微调预算。隐式路线联合优化图像与动作；辅助
+          loss 只用于本组收敛诊断。
+        </p>
+        <div id="experiment" class="note"></div>
+        <div id="results"></div>
+        <div class="columns">
+          <article class="card">
+            <h3>预测动作与专家目标</h3>
+            <div class="toolbar">
+              <select id="condition"></select
+              ><select id="sample"></select
+              ><select id="joint"></select>
+            </div>
+            <div class="legend">
+              <span style="--swatch: #147b61">绿色实线：模型预测</span
+              ><span class="dashed" style="--swatch: #cf773d"
+                >橙色虚线：专家目标</span
+              >
+            </div>
+            <canvas id="actionplot" width="900" height="330"></canvas>
+            <p id="actioninfo"></p>
+            <small
+              >实线：预测绝对关节目标；虚线：数据集目标。关节使用
+              rad，夹爪使用原生标量。</small
+            >
+          </article>
+          <article class="card">
+            <h3 id="execution-evidence">闭环执行视频（机械臂实际执行录像）</h3>
+            <p>
+              策略看当前三路相机和状态 → 预测 16 步 → 执行前 4 条 →
+              获取新观测再预测。视频来自物理仿真中实际执行，包含接触和失败；不是人类视频重定向，也不是把专家动作直接回放。
+            </p>
+            <select id="rollout"></select
+            ><video id="rolloutvideo" controls playsinline></video>
+            <p id="rolloutinfo"></p>
+            <a id="rolloutdownload" download>下载当前实际执行录像</a>
+            <div class="legend">
+              <span style="--swatch: #9464b1">紫线：模型原始命令</span
+              ><span style="--swatch: #147b61">绿线：约束后执行命令</span
+              ><span style="--swatch: #cf773d"
+                >橙线：执行后物理关节（旧记录则为驱动目标）</span
+              ><span class="dashed" style="--swatch: #263b30"
+                >黑线：当前视频时刻</span
+              >
+            </div>
+            <canvas id="executionplot" width="900" height="280"></canvas
+            ><small
+              >原始模型目标（紫）、约束后执行命令（绿）与执行后物理关节（橙）；游标跟随视频。旧版若未记录物理关节会明确提示。不是专家轨迹误差。</small
+            >
+            <canvas id="bottleplot" width="900" height="250"></canvas>
+            <div id="executionmetrics"></div>
+          </article>
+        </div>
+        <article class="card">
+          <h3>未来图像重建（训练素材）</h3>
+          <p>
+            联合预训练结束时的未来图像重建：当前帧 / 预测 +0.5 秒 / 真实 +0.5
+            秒。这些不是人类视频测试集；清晰度不直接代表机器人任务能力。
+          </p>
+          <div id="futureimages" class="columns"></div>
+        </article>
+        <div id="interpretation" class="note"></div>
+      </section>
+      <section id="metrics">
+        <div class="eyebrow">04 / MEASUREMENTS</div>
+        <h2>指标怎么算，究竟能说明什么</h2>
+        <p>
+          离线误差比较同一段专家目标；执行误差比较机器人实际运动；任务成功率比较完成任务。这三种误差不能相互替代。
+        </p>
+        <div id="metricglossary"></div>
+      </section>
+      <footer>
+        可追溯数据与模型输出 · 本实验为小型视觉行为克隆，不是完整语言
+        VLA，也不是实机验证。<a href="index.html"
+          >查看第一版几何与重定向压力测试</a
+        >
+      </footer>
+    </main>
+    <script src="v2.js"></script>
+    <script src="v2-details.js"></script>
+    <script type="importmap">
+      { "imports": { "three": "./vendor/three/build/three.module.js" } }
+    </script>
+    <script type="module" src="v2-robot.js"></script>
+    <script src="v2-experiment.js"></script>
+  </body>
+</html>
