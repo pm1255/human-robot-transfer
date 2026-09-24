@@ -1,11 +1,19 @@
 [
   {
+    "path": "PROJECT_STATUS.md",
+    "sha256": "76508f3096e288fd59d42018f0dedb6c627f00cbef4c0887114b9cb66154d561"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "ca327924c0b893633b49eb6b63db84926d6abcd856f8846b80bd9a667e4c0b57"
+  },
+  {
     "path": "VALIDATION.md",
     "sha256": "d07e6c16fd0486471ffca6554af4324d829b78d6cdf87f4a6ed97fad96a3c9cf"
   },
   {
     "path": "README.md",
-    "sha256": "6e9a9af6503ed353fa68dd1f2f4267448e22c31a24b798bfad4742bf4ddc0c7d"
+    "sha256": "1cd8b0633f572aa47cd84eda598172e8e274075dd6520de9109f67fe42f47223"
   },
   {
     "path": ".gitignore",
@@ -13,7 +21,7 @@
   },
   {
     "path": "OPTIMIZATION.md",
-    "sha256": "526f2f9dd9e7f9684ee6a2d0af1d5486ef69c402119553bcf0df3733a38dd4f1"
+    "sha256": "d80e827df2bceb46c6948443f54ea4190776f9149e91633cc64695d7799d5334"
   },
   {
     "path": "runtime_snapshots/README.md",
@@ -654,5 +662,33 @@
   {
     "path": "website/showcase.json",
     "sha256": "8d07be1d4cf513901ea107ca9bc7f5041adce3d3957064090a985594f8ded20d"
+  },
+  {
+    "path": "docs/assets/provenance.json",
+    "sha256": "96e61b08fb367f9625d45419cf57371d9fc59e34ce992d57e5ad3da2af76ca67"
+  },
+  {
+    "path": "docs/assets/human-to-arm-preview.gif",
+    "sha256": "e58f9f96ae393dfa3a7aa208c503acd38e349229888027bdd3dd55781290db4c"
+  },
+  {
+    "path": "docs/assets/annotation-grasp.gif",
+    "sha256": "c612824a8cac2e87d0c8eef663a0ffca644c33fb5807aa65a243984621110e26"
+  },
+  {
+    "path": "docs/assets/annotation-two-hands.gif",
+    "sha256": "74ee13f0936407cff9afcdd2b06d47829bcf42e2f0e0a4899dfa15edc97bf9d4"
+  },
+  {
+    "path": "docs/assets/README.md",
+    "sha256": "7c9f5ac167a0660e03f8b9b4c88fa85ebee1beecc27d6576adf585b5cb688efd"
+  },
+  {
+    "path": "docs/assets/annotation-missed.gif",
+    "sha256": "ff3eddbd60ea9adcd8c067a2949e5d0a7328df5f2a1ae166c80668106aafbf04"
+  },
+  {
+    "path": "docs/assets/robot-to-human-failure.gif",
+    "sha256": "de09b5ecc922dfe2138a06ebdc8a7a4dc2ed59f027735a6d2338bee64aec917c"
   }
 ]

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "annotation-two-hands.gif",
+    "example_id": "ann_epic_003408",
+    "source_dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "e001fe6e8beef492d253eaca2977be60523c8088104db868872923b5f8ce15a8",
+    "preview_seconds_max": 4,
+    "preview_fps": 8,
+    "modifications": "Excerpt, resize, GIF compression; model annotation or embodiment editing already present in source preview.",
+    "training_alignment_verified": false
+  },
+  {
+    "file": "annotation-grasp.gif",
+    "example_id": "ann_epic_001910",
+    "source_dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "1ddf49358489a167be9d775aca77fbfe01a8a20861d220fd879f2b02ead190ae",
+    "preview_seconds_max": 4,
+    "preview_fps": 8,
+    "modifications": "Excerpt, resize, GIF compression; model annotation or embodiment editing already present in source preview.",
+    "training_alignment_verified": false
+  },
+  {
+    "file": "annotation-missed.gif",
+    "example_id": "ann_epic_001856",
+    "source_dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "db06b1470541a4f66676cfdd4e8cb143678f8bc488b233b0f11ed3d3a57b12c5",
+    "preview_seconds_max": 4,
+    "preview_fps": 8,
+    "modifications": "Excerpt, resize, GIF compression; model annotation or embodiment editing already present in source preview.",
+    "training_alignment_verified": false
+  },
+  {
+    "file": "human-to-arm-preview.gif",
+    "example_id": "conv_epic_000004",
+    "source_dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "734050f479b67dd089e4fe2721a962e550bc409e08dc8d862e4f4c11e980c97f",
+    "preview_seconds_max": 4,
+    "preview_fps": 8,
+    "modifications": "Excerpt, resize, GIF compression; model annotation or embodiment editing already present in source preview.",
+    "training_alignment_verified": false
+  },
+  {
+    "file": "robot-to-human-failure.gif",
+    "example_id": "bridge_bridge_007089_larger",
+    "source_dataset": "BridgeData V2",
+    "source_video_sha256": "472b537451a190c706a5c4d641a445568b7695b2ced725c447166a23e631aff8",
+    "preview_seconds_max": 4,
+    "preview_fps": 8,
+    "modifications": "Excerpt, resize, GIF compression; model annotation or embodiment editing already present in source preview.",
+    "training_alignment_verified": false
+  }
+]
