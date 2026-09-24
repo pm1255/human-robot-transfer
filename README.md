@@ -4,7 +4,7 @@
 
 **本页 48 个动画示例**：24 个人类标注、8 个人手→机械臂、4 个人体→机器人、12 个机器人→人手版本（后者来自 6 段源视频）。[完整效果主页：66 个结果 / 53 段源片段](https://robot-human-video-lab.panmiao307.chatgpt.site/)。
 
-预览截取前 3 秒、5 FPS；**点击动画查看完整展示视频**。标注采用三列，机器人转人采用两列，横向三栏对照独占一行。所有画面来自实际实验，包含漏检和失败。模型标注不等于人工真值，转换结果尚未验证接触或动作等价。
+预览截取前 3 秒、5 FPS；**点击动画查看完整展示视频**。标注与机器人转人均采用两列，横向三栏对照独占一行。所有画面来自实际实验，包含漏检和失败。模型标注不等于人工真值，转换结果尚未验证接触或动作等价。
 
 ## 首次安装（只做一次）
 
@@ -32,44 +32,52 @@ macOS 的系统依赖可用 `brew install ffmpeg`；MediaPipe 在部分无图形
 
 <table>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003408.mp4"><img src="docs/gallery/ann_epic_003408.gif" width="256" alt="epic_003408"></a><br><sub>epic_003408</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_002681.mp4"><img src="docs/gallery/ann_epic_002681.gif" width="256" alt="epic_002681"></a><br><sub>epic_002681</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003706.mp4"><img src="docs/gallery/ann_epic_003706.gif" width="256" alt="epic_003706"></a><br><sub>epic_003706</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003408.mp4"><img src="docs/gallery/ann_epic_003408.gif" width="100%" alt="epic_003408"></a><br><sub>epic_003408</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_002681.mp4"><img src="docs/gallery/ann_epic_002681.gif" width="100%" alt="epic_002681"></a><br><sub>epic_002681</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003867.mp4"><img src="docs/gallery/ann_epic_003867.gif" width="256" alt="epic_003867"></a><br><sub>epic_003867</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001301.mp4"><img src="docs/gallery/ann_epic_001301.gif" width="256" alt="epic_001301"></a><br><sub>epic_001301</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000260.mp4"><img src="docs/gallery/ann_epic_000260.gif" width="256" alt="epic_000260"></a><br><sub>epic_000260</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003706.mp4"><img src="docs/gallery/ann_epic_003706.gif" width="100%" alt="epic_003706"></a><br><sub>epic_003706</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003867.mp4"><img src="docs/gallery/ann_epic_003867.gif" width="100%" alt="epic_003867"></a><br><sub>epic_003867</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000718.mp4"><img src="docs/gallery/ann_epic_000718.gif" width="256" alt="epic_000718"></a><br><sub>epic_000718</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001542.mp4"><img src="docs/gallery/ann_epic_001542.gif" width="256" alt="epic_001542"></a><br><sub>epic_001542</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000577.mp4"><img src="docs/gallery/ann_epic_000577.gif" width="256" alt="epic_000577"></a><br><sub>epic_000577</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001301.mp4"><img src="docs/gallery/ann_epic_001301.gif" width="100%" alt="epic_001301"></a><br><sub>epic_001301</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000260.mp4"><img src="docs/gallery/ann_epic_000260.gif" width="100%" alt="epic_000260"></a><br><sub>epic_000260</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_002011.mp4"><img src="docs/gallery/ann_epic_002011.gif" width="256" alt="epic_002011"></a><br><sub>epic_002011</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003905.mp4"><img src="docs/gallery/ann_epic_003905.gif" width="256" alt="epic_003905"></a><br><sub>epic_003905</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001880.mp4"><img src="docs/gallery/ann_epic_001880.gif" width="256" alt="epic_001880"></a><br><sub>epic_001880</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000718.mp4"><img src="docs/gallery/ann_epic_000718.gif" width="100%" alt="epic_000718"></a><br><sub>epic_000718</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001542.mp4"><img src="docs/gallery/ann_epic_001542.gif" width="100%" alt="epic_001542"></a><br><sub>epic_001542</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000039.mp4"><img src="docs/gallery/ann_epic_000039.gif" width="256" alt="epic_000039"></a><br><sub>epic_000039</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001805.mp4"><img src="docs/gallery/ann_epic_001805.gif" width="256" alt="epic_001805"></a><br><sub>epic_001805</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003179.mp4"><img src="docs/gallery/ann_epic_003179.gif" width="256" alt="epic_003179"></a><br><sub>epic_003179</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000577.mp4"><img src="docs/gallery/ann_epic_000577.gif" width="100%" alt="epic_000577"></a><br><sub>epic_000577</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_002011.mp4"><img src="docs/gallery/ann_epic_002011.gif" width="100%" alt="epic_002011"></a><br><sub>epic_002011</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001856.mp4"><img src="docs/gallery/ann_epic_001856.gif" width="256" alt="epic_001856"></a><br><sub>epic_001856</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_swing_baseball_00.mp4"><img src="docs/gallery/ann_hmdb_body_swing_baseball_00.gif" width="256" alt="hmdb_body_swing_baseball_00"></a><br><sub>hmdb_body_swing_baseball_00</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_cartwheel_03.mp4"><img src="docs/gallery/ann_hmdb_body_cartwheel_03.gif" width="256" alt="hmdb_body_cartwheel_03"></a><br><sub>hmdb_body_cartwheel_03</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003905.mp4"><img src="docs/gallery/ann_epic_003905.gif" width="100%" alt="epic_003905"></a><br><sub>epic_003905</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001880.mp4"><img src="docs/gallery/ann_epic_001880.gif" width="100%" alt="epic_001880"></a><br><sub>epic_001880</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_golf_01.mp4"><img src="docs/gallery/ann_hmdb_body_golf_01.gif" width="256" alt="hmdb_body_golf_01"></a><br><sub>hmdb_body_golf_01</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_wave_01.mp4"><img src="docs/gallery/ann_hmdb_wave_01.gif" width="256" alt="hmdb_wave_01"></a><br><sub>hmdb_wave_01</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_stand_02.mp4"><img src="docs/gallery/ann_hmdb_stand_02.gif" width="256" alt="hmdb_stand_02"></a><br><sub>hmdb_stand_02</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000039.mp4"><img src="docs/gallery/ann_epic_000039.gif" width="100%" alt="epic_000039"></a><br><sub>epic_000039</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001805.mp4"><img src="docs/gallery/ann_epic_001805.gif" width="100%" alt="epic_001805"></a><br><sub>epic_001805</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_pick_02.mp4"><img src="docs/gallery/ann_hmdb_pick_02.gif" width="256" alt="hmdb_pick_02"></a><br><sub>hmdb_pick_02</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_swing_baseball_02.mp4"><img src="docs/gallery/ann_hmdb_body_swing_baseball_02.gif" width="256" alt="hmdb_body_swing_baseball_02"></a><br><sub>hmdb_body_swing_baseball_02</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_cartwheel_01.mp4"><img src="docs/gallery/ann_hmdb_body_cartwheel_01.gif" width="256" alt="hmdb_body_cartwheel_01"></a><br><sub>hmdb_body_cartwheel_01</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003179.mp4"><img src="docs/gallery/ann_epic_003179.gif" width="100%" alt="epic_003179"></a><br><sub>epic_003179</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001856.mp4"><img src="docs/gallery/ann_epic_001856.gif" width="100%" alt="epic_001856"></a><br><sub>epic_001856</sub></td>
+</tr>
+<tr>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_swing_baseball_00.mp4"><img src="docs/gallery/ann_hmdb_body_swing_baseball_00.gif" width="100%" alt="hmdb_body_swing_baseball_00"></a><br><sub>hmdb_body_swing_baseball_00</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_cartwheel_03.mp4"><img src="docs/gallery/ann_hmdb_body_cartwheel_03.gif" width="100%" alt="hmdb_body_cartwheel_03"></a><br><sub>hmdb_body_cartwheel_03</sub></td>
+</tr>
+<tr>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_golf_01.mp4"><img src="docs/gallery/ann_hmdb_body_golf_01.gif" width="100%" alt="hmdb_body_golf_01"></a><br><sub>hmdb_body_golf_01</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_wave_01.mp4"><img src="docs/gallery/ann_hmdb_wave_01.gif" width="100%" alt="hmdb_wave_01"></a><br><sub>hmdb_wave_01</sub></td>
+</tr>
+<tr>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_stand_02.mp4"><img src="docs/gallery/ann_hmdb_stand_02.gif" width="100%" alt="hmdb_stand_02"></a><br><sub>hmdb_stand_02</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_pick_02.mp4"><img src="docs/gallery/ann_hmdb_pick_02.gif" width="100%" alt="hmdb_pick_02"></a><br><sub>hmdb_pick_02</sub></td>
+</tr>
+<tr>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_swing_baseball_02.mp4"><img src="docs/gallery/ann_hmdb_body_swing_baseball_02.gif" width="100%" alt="hmdb_body_swing_baseball_02"></a><br><sub>hmdb_body_swing_baseball_02</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_cartwheel_01.mp4"><img src="docs/gallery/ann_hmdb_body_cartwheel_01.gif" width="100%" alt="hmdb_body_cartwheel_01"></a><br><sub>hmdb_body_cartwheel_01</sub></td>
 </tr>
 </table>
 
@@ -86,32 +94,21 @@ python tools/run.py annotate --video inputs/human.mp4 --view egocentric --out ou
 
 每行依次为 **原视频 / 删除掩码 / 机器人渲染**。当前是几何合成预览，背景修补、相机尺度、遮挡与接触仍不可靠。
 
-<table>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000004.mp4"><img src="docs/gallery/conv_epic_000004.gif" width="840" alt="epic_000004"></a><br><sub>epic_000004</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000007.mp4"><img src="docs/gallery/conv_epic_000007.gif" width="840" alt="epic_000007"></a><br><sub>epic_000007</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000015.mp4"><img src="docs/gallery/conv_epic_000015.gif" width="840" alt="epic_000015"></a><br><sub>epic_000015</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000040.mp4"><img src="docs/gallery/conv_epic_000040.gif" width="840" alt="epic_000040"></a><br><sub>epic_000040</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000100.mp4"><img src="docs/gallery/conv_epic_000100.gif" width="840" alt="epic_000100"></a><br><sub>epic_000100</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000250.mp4"><img src="docs/gallery/conv_epic_000250.gif" width="840" alt="epic_000250"></a><br><sub>epic_000250</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000500.mp4"><img src="docs/gallery/conv_epic_000500.gif" width="840" alt="epic_000500"></a><br><sub>epic_000500</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_001000.mp4"><img src="docs/gallery/conv_epic_001000.gif" width="840" alt="epic_001000"></a><br><sub>epic_001000</sub></td>
-</tr>
-</table>
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000004.mp4"><img src="docs/gallery/conv_epic_000004.gif" width="100%" alt="epic_000004"></a><br><sub>epic_000004</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000007.mp4"><img src="docs/gallery/conv_epic_000007.gif" width="100%" alt="epic_000007"></a><br><sub>epic_000007</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000015.mp4"><img src="docs/gallery/conv_epic_000015.gif" width="100%" alt="epic_000015"></a><br><sub>epic_000015</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000040.mp4"><img src="docs/gallery/conv_epic_000040.gif" width="100%" alt="epic_000040"></a><br><sub>epic_000040</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000100.mp4"><img src="docs/gallery/conv_epic_000100.gif" width="100%" alt="epic_000100"></a><br><sub>epic_000100</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000250.mp4"><img src="docs/gallery/conv_epic_000250.gif" width="100%" alt="epic_000250"></a><br><sub>epic_000250</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000500.mp4"><img src="docs/gallery/conv_epic_000500.gif" width="100%" alt="epic_000500"></a><br><sub>epic_000500</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_001000.mp4"><img src="docs/gallery/conv_epic_001000.gif" width="100%" alt="epic_001000"></a><br><sub>epic_001000</sub></p>
 
 ### 初次准备 + 一键启动：人手转机械臂
 
@@ -136,20 +133,13 @@ python tools/run.py arm --video inputs/human.mp4 \
 
 同样采用全宽三栏：**原视频 / 人体删除掩码 / G1 替换**。全身姿态拟合不代表机器人平衡、接触或运动可执行。
 
-<table>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_golf_03.mp4"><img src="docs/gallery/conv_hmdb_body_golf_03.gif" width="840" alt="hmdb_body_golf_03"></a><br><sub>hmdb_body_golf_03</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_golf_02.mp4"><img src="docs/gallery/conv_hmdb_body_golf_02.gif" width="840" alt="hmdb_body_golf_02"></a><br><sub>hmdb_body_golf_02</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_kick_ball_00.mp4"><img src="docs/gallery/conv_hmdb_body_kick_ball_00.gif" width="840" alt="hmdb_body_kick_ball_00"></a><br><sub>hmdb_body_kick_ball_00</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_cartwheel_00.mp4"><img src="docs/gallery/conv_hmdb_body_cartwheel_00.gif" width="840" alt="hmdb_body_cartwheel_00"></a><br><sub>hmdb_body_cartwheel_00</sub></td>
-</tr>
-</table>
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_golf_03.mp4"><img src="docs/gallery/conv_hmdb_body_golf_03.gif" width="100%" alt="hmdb_body_golf_03"></a><br><sub>hmdb_body_golf_03</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_golf_02.mp4"><img src="docs/gallery/conv_hmdb_body_golf_02.gif" width="100%" alt="hmdb_body_golf_02"></a><br><sub>hmdb_body_golf_02</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_kick_ball_00.mp4"><img src="docs/gallery/conv_hmdb_body_kick_ball_00.gif" width="100%" alt="hmdb_body_kick_ball_00"></a><br><sub>hmdb_body_kick_ball_00</sub></p>
+
+<p align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_cartwheel_00.mp4"><img src="docs/gallery/conv_hmdb_body_cartwheel_00.gif" width="100%" alt="hmdb_body_cartwheel_00"></a><br><sub>hmdb_body_cartwheel_00</sub></p>
 
 ### 初次准备 + 一键启动：人体转机器人
 
@@ -171,28 +161,28 @@ python tools/run.py humanoid --video inputs/full_body.mp4 \
 
 <table>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_007089/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_007089_optimized.gif" width="360" alt="取出玻璃杯 · 扩大掩码 A"></a><br><sub>取出玻璃杯 · 扩大掩码 A</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_007089/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_007089_alternate.gif" width="360" alt="取出玻璃杯 · 扩大掩码 B"></a><br><sub>取出玻璃杯 · 扩大掩码 B</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_007089/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_007089_optimized.gif" width="100%" alt="取出玻璃杯 · 扩大掩码 A"></a><br><sub>取出玻璃杯 · 扩大掩码 A</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_007089/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_007089_alternate.gif" width="100%" alt="取出玻璃杯 · 扩大掩码 B"></a><br><sub>取出玻璃杯 · 扩大掩码 B</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_015993/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_015993_optimized.gif" width="360" alt="抬起蓝色碗 · 扩大掩码 A"></a><br><sub>抬起蓝色碗 · 扩大掩码 A</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_015993/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_015993_alternate.gif" width="360" alt="抬起蓝色碗 · 扩大掩码 B"></a><br><sub>抬起蓝色碗 · 扩大掩码 B</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_015993/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_015993_optimized.gif" width="100%" alt="抬起蓝色碗 · 扩大掩码 A"></a><br><sub>抬起蓝色碗 · 扩大掩码 A</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_015993/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_015993_alternate.gif" width="100%" alt="抬起蓝色碗 · 扩大掩码 B"></a><br><sub>抬起蓝色碗 · 扩大掩码 B</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_040489/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_040489_optimized.gif" width="360" alt="金属盆放到紫毛巾 · 扩大掩码 A"></a><br><sub>金属盆放到紫毛巾 · 扩大掩码 A</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_040489/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_040489_alternate.gif" width="360" alt="金属盆放到紫毛巾 · 扩大掩码 B"></a><br><sub>金属盆放到紫毛巾 · 扩大掩码 B</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_040489/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_040489_optimized.gif" width="100%" alt="金属盆放到紫毛巾 · 扩大掩码 A"></a><br><sub>金属盆放到紫毛巾 · 扩大掩码 A</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_040489/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_040489_alternate.gif" width="100%" alt="金属盆放到紫毛巾 · 扩大掩码 B"></a><br><sub>金属盆放到紫毛巾 · 扩大掩码 B</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_041207/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_041207_optimized.gif" width="360" alt="移动红色罐子 · 扩大掩码 A"></a><br><sub>移动红色罐子 · 扩大掩码 A</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_041207/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_041207_alternate.gif" width="360" alt="移动红色罐子 · 扩大掩码 B"></a><br><sub>移动红色罐子 · 扩大掩码 B</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_041207/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_041207_optimized.gif" width="100%" alt="移动红色罐子 · 扩大掩码 A"></a><br><sub>移动红色罐子 · 扩大掩码 A</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_041207/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_041207_alternate.gif" width="100%" alt="移动红色罐子 · 扩大掩码 B"></a><br><sub>移动红色罐子 · 扩大掩码 B</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_042977/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_042977_optimized.gif" width="360" alt="移动金属锅 · 扩大掩码 A"></a><br><sub>移动金属锅 · 扩大掩码 A</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_042977/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_042977_alternate.gif" width="360" alt="移动金属锅 · 扩大掩码 B"></a><br><sub>移动金属锅 · 扩大掩码 B</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_042977/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_042977_optimized.gif" width="100%" alt="移动金属锅 · 扩大掩码 A"></a><br><sub>移动金属锅 · 扩大掩码 A</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_042977/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_042977_alternate.gif" width="100%" alt="移动金属锅 · 扩大掩码 B"></a><br><sub>移动金属锅 · 扩大掩码 B</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_045160/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_045160_optimized.gif" width="360" alt="抓取与移动罐子 · 扩大掩码 A"></a><br><sub>抓取与移动罐子 · 扩大掩码 A</sub></td>
-<td align="center"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_045160/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_045160_alternate.gif" width="360" alt="抓取与移动罐子 · 扩大掩码 B"></a><br><sub>抓取与移动罐子 · 扩大掩码 B</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_045160/handroom/seed2026/human.mp4"><img src="docs/gallery/bridge_bridge_045160_optimized.gif" width="100%" alt="抓取与移动罐子 · 扩大掩码 A"></a><br><sub>抓取与移动罐子 · 扩大掩码 A</sub></td>
+<td align="center" width="50%"><a href="https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_045160/handroom/seed2027/human.mp4"><img src="docs/gallery/bridge_bridge_045160_alternate.gif" width="100%" alt="抓取与移动罐子 · 扩大掩码 B"></a><br><sub>抓取与移动罐子 · 扩大掩码 B</sub></td>
 </tr>
 </table>
 

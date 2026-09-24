@@ -6,7 +6,7 @@
 - README contains 48 distinct animated previews: 24 annotation, 8 hand-to-arm, 4 body-to-G1, 12 robot-to-human variants from 6 source scenes.
 - The linked public website retains 66 result videos / 53 distinct source clip IDs: 36 annotation, 8 arm, 4 humanoid, 18 generated variants.
 - Each new GIF has a public full-video link, dataset attribution and source-preview SHA-256 in `docs/gallery/provenance.json`. Media are outside the code MIT license.
-- README relative links, all 48 GIF paths and Python syntax were checked. Panoramic three-panel videos use one full-width table row; annotation previews use three columns and robot-to-human A/B previews use two.
+- README relative links, all 48 GIF paths and Python syntax were checked. All 48 full-video links returned HTTP 200 with video content types using a browser User-Agent. Panoramic three-panel videos use one full-width paragraph; annotation previews use two columns and robot-to-human A/B previews use two.
 
 ## Startup validation
 
