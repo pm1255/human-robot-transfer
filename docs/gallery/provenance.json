@@ -1,0 +1,482 @@
+[
+  {
+    "file": "docs/gallery/ann_epic_003408.gif",
+    "example_id": "ann_epic_003408",
+    "source_id": "epic_003408",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "e001fe6e8beef492d253eaca2977be60523c8088104db868872923b5f8ce15a8",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003408.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_002681.gif",
+    "example_id": "ann_epic_002681",
+    "source_id": "epic_002681",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "30b4d3c87fa6aa6382d05ac64683bbbab0d54c6f96eb32f23d9b84de5e57db94",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_002681.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_003706.gif",
+    "example_id": "ann_epic_003706",
+    "source_id": "epic_003706",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "db8082a977894709a998aaeca95612ef8e0edf53ac37b87a2461d662a3d99794",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003706.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_003867.gif",
+    "example_id": "ann_epic_003867",
+    "source_id": "epic_003867",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "518b2ed33429768ee7ced1a589d50d97f0e295fa6d6e2376c2600279de3e1860",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003867.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_001301.gif",
+    "example_id": "ann_epic_001301",
+    "source_id": "epic_001301",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "4e9f17f20bd9a234693ae3d0e45dceb8a7a0fdfef9d97b2e73632ef609f38af6",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001301.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_000260.gif",
+    "example_id": "ann_epic_000260",
+    "source_id": "epic_000260",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "088c2199955729467f344bbd9bddbdaa3c68c5b1ea08441dfafc28ca9b777ad2",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000260.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_000718.gif",
+    "example_id": "ann_epic_000718",
+    "source_id": "epic_000718",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "e53fb241885d94c9f748b4c322df94fc5b16f8bad6f9bc9b38127167a01be9ff",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000718.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_001542.gif",
+    "example_id": "ann_epic_001542",
+    "source_id": "epic_001542",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "bc8d588f6713cb652e1ee3dfc2eccaad37ffe1ef53d1939087f7c182584df356",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001542.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_000577.gif",
+    "example_id": "ann_epic_000577",
+    "source_id": "epic_000577",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "6ceb3c6d66837907f93bc4764e82582e89f97c764aeaf06b592ed79dafb3346f",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000577.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_002011.gif",
+    "example_id": "ann_epic_002011",
+    "source_id": "epic_002011",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "c2859592d5c8315554e7a613fa5d3ce167bad84d264302da26d5d65c43d928d7",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_002011.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_003905.gif",
+    "example_id": "ann_epic_003905",
+    "source_id": "epic_003905",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "9bbea781865a59aa16f54473c676812c1dd6b4289a045b313644b82e17a1a2dd",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003905.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_001880.gif",
+    "example_id": "ann_epic_001880",
+    "source_id": "epic_001880",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "c9ac3f10fe6762e5156a3325a7ab257ae719158eb8365b992227ff8fad60b0fd",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001880.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_000039.gif",
+    "example_id": "ann_epic_000039",
+    "source_id": "epic_000039",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "d1cb59d568ca4c5d6edbdede635190955fb190713db7c3c2a8268bc1594ade0f",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_000039.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_001805.gif",
+    "example_id": "ann_epic_001805",
+    "source_id": "epic_001805",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "9898798848dd0b4e0424bcb3223d6da49503e4dbaa74a64d15c51d4418ce0131",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001805.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_003179.gif",
+    "example_id": "ann_epic_003179",
+    "source_id": "epic_003179",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "3c883b58f2f6c88233a33a4e935861261d3d44e4e110544d60c2ba3f47727df0",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_003179.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_epic_001856.gif",
+    "example_id": "ann_epic_001856",
+    "source_id": "epic_001856",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "db06b1470541a4f66676cfdd4e8cb143678f8bc488b233b0f11ed3d3a57b12c5",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/epic_001856.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_body_swing_baseball_00.gif",
+    "example_id": "ann_hmdb_body_swing_baseball_00",
+    "source_id": "hmdb_body_swing_baseball_00",
+    "dataset": "HMDB51",
+    "source_video_sha256": "9422398ec2a641b8d3c48ccaaf363ff96dc0360a771e2807497f7645b9b06558",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_swing_baseball_00.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_body_cartwheel_03.gif",
+    "example_id": "ann_hmdb_body_cartwheel_03",
+    "source_id": "hmdb_body_cartwheel_03",
+    "dataset": "HMDB51",
+    "source_video_sha256": "0fb6d4c7f7a2ff55a0b60a9209a21a447c6e1938d297a9c56f34abee1c745a13",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_cartwheel_03.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_body_golf_01.gif",
+    "example_id": "ann_hmdb_body_golf_01",
+    "source_id": "hmdb_body_golf_01",
+    "dataset": "HMDB51",
+    "source_video_sha256": "fd36b7e1e0ce4ad43890e697d490f99357536498623be5eb9048d1c75a7843ab",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_golf_01.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_wave_01.gif",
+    "example_id": "ann_hmdb_wave_01",
+    "source_id": "hmdb_wave_01",
+    "dataset": "HMDB51",
+    "source_video_sha256": "24285dadce648143617af319912a5eddc7b12992445e0b406bfb3b87e734a1c9",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_wave_01.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_stand_02.gif",
+    "example_id": "ann_hmdb_stand_02",
+    "source_id": "hmdb_stand_02",
+    "dataset": "HMDB51",
+    "source_video_sha256": "e47d28d3df1a7846242474b9a1f89fac1427dd3ed66bdbb1cf2a74602f65ba22",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_stand_02.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_pick_02.gif",
+    "example_id": "ann_hmdb_pick_02",
+    "source_id": "hmdb_pick_02",
+    "dataset": "HMDB51",
+    "source_video_sha256": "0688e72d140cca42959b4c82457b5e3e09b5101558721025be820c8322f207f5",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_pick_02.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_body_swing_baseball_02.gif",
+    "example_id": "ann_hmdb_body_swing_baseball_02",
+    "source_id": "hmdb_body_swing_baseball_02",
+    "dataset": "HMDB51",
+    "source_video_sha256": "0f3ff6d71cd0726e57513fdb63b838890749649f8dd9d113b6920db4ffab556c",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_swing_baseball_02.mp4"
+  },
+  {
+    "file": "docs/gallery/ann_hmdb_body_cartwheel_01.gif",
+    "example_id": "ann_hmdb_body_cartwheel_01",
+    "source_id": "hmdb_body_cartwheel_01",
+    "dataset": "HMDB51",
+    "source_video_sha256": "de4c3f3b9b55afa085af5df3a15a6bd23c28e2b67e39edcec6616f3f05252b3b",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/hmdb_body_cartwheel_01.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_000004.gif",
+    "example_id": "conv_epic_000004",
+    "source_id": "epic_000004",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "734050f479b67dd089e4fe2721a962e550bc409e08dc8d862e4f4c11e980c97f",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000004.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_000007.gif",
+    "example_id": "conv_epic_000007",
+    "source_id": "epic_000007",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "deb88f1a4c6ecbd9fd5dc8aecdb235baccbb647c49856134a44f42c51469bec9",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000007.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_000015.gif",
+    "example_id": "conv_epic_000015",
+    "source_id": "epic_000015",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "15e0c7b6036bf6b38b2f8569e717211737f56bf6cf3213ac0dc35147b2508271",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000015.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_000040.gif",
+    "example_id": "conv_epic_000040",
+    "source_id": "epic_000040",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "756deb6ddeb508fba669965ef6e8876bb438a22965b8bb3d3dff85f8338b0ebd",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000040.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_000100.gif",
+    "example_id": "conv_epic_000100",
+    "source_id": "epic_000100",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "6a9cc73d163b0fd39ef0f6c2481fe6053ac9e4ebeba8870e4ee9e52fdacb0a31",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000100.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_000250.gif",
+    "example_id": "conv_epic_000250",
+    "source_id": "epic_000250",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "6f8e105e753e010d0d51f30b7fee4c6a1f20b81f5dd49cde68c80b26702eba0e",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000250.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_000500.gif",
+    "example_id": "conv_epic_000500",
+    "source_id": "epic_000500",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "b9234214e1c184a0c2b4b8b8a77d225e9a13585a270d11fbf1d190a28dfa56af",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_000500.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_epic_001000.gif",
+    "example_id": "conv_epic_001000",
+    "source_id": "epic_001000",
+    "dataset": "EPIC-KITCHENS",
+    "source_video_sha256": "5a7c6eac842c322b62696f07b94f12ec7760365f42959129ba82ef9beb44a80d",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_epic_001000.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_hmdb_body_golf_03.gif",
+    "example_id": "conv_hmdb_body_golf_03",
+    "source_id": "hmdb_body_golf_03",
+    "dataset": "HMDB51",
+    "source_video_sha256": "eb39dd27b5f6d985e45c48a8e32bc4dc28f12c15de86ce4242f19ca14e654ef8",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_golf_03.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_hmdb_body_golf_02.gif",
+    "example_id": "conv_hmdb_body_golf_02",
+    "source_id": "hmdb_body_golf_02",
+    "dataset": "HMDB51",
+    "source_video_sha256": "84b3efb8a5a8ab4797b17021e41088018e5fb3e8c0cc8f583b569f0f68bdcd11",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_golf_02.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_hmdb_body_kick_ball_00.gif",
+    "example_id": "conv_hmdb_body_kick_ball_00",
+    "source_id": "hmdb_body_kick_ball_00",
+    "dataset": "HMDB51",
+    "source_video_sha256": "06087a482d9cc08ebbb4847b224c76e8cd04ed3b2539117986aedf5c333b8f1a",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_kick_ball_00.mp4"
+  },
+  {
+    "file": "docs/gallery/conv_hmdb_body_cartwheel_00.gif",
+    "example_id": "conv_hmdb_body_cartwheel_00",
+    "source_id": "hmdb_body_cartwheel_00",
+    "dataset": "HMDB51",
+    "source_video_sha256": "d705abfae7078e9b5807bb6b1c0e868d9317d0201852b47714b085154be4823c",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/showcase/convert_hmdb_body_cartwheel_00.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_042977_optimized.gif",
+    "example_id": "bridge_bridge_042977_optimized",
+    "source_id": "bridge_bridge_042977",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "41cebabb2ffeba24814e3627a24d38dc723f21dd9b3ad1f98810fd2dd73173ee",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_042977/handroom/seed2026/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_007089_optimized.gif",
+    "example_id": "bridge_bridge_007089_optimized",
+    "source_id": "bridge_bridge_007089",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "6a1dd6bce821d6f1235618376b6aeb2cd006aa96db456c6cfca7b0d5b0806eaf",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_007089/handroom/seed2026/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_045160_optimized.gif",
+    "example_id": "bridge_bridge_045160_optimized",
+    "source_id": "bridge_bridge_045160",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "5ceb01c9ff2972a24441b958fda2dac149a7c8caca38bcb16823e5efc927df35",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_045160/handroom/seed2026/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_015993_optimized.gif",
+    "example_id": "bridge_bridge_015993_optimized",
+    "source_id": "bridge_bridge_015993",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "be7f9037269e16d685ac3bec554af380e6a642343761c3ac0640bb36af1d3efb",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_015993/handroom/seed2026/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_041207_optimized.gif",
+    "example_id": "bridge_bridge_041207_optimized",
+    "source_id": "bridge_bridge_041207",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "89b4ca334add6b636c359c0f68979ec88c3cae05dee66dca9797ac02cfe3b045",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_041207/handroom/seed2026/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_040489_optimized.gif",
+    "example_id": "bridge_bridge_040489_optimized",
+    "source_id": "bridge_bridge_040489",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "db0ce665bea51e3cc8797854cdb7ad188cffae9fbea858215f1d7798e4764077",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_040489/handroom/seed2026/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_042977_alternate.gif",
+    "example_id": "bridge_bridge_042977_alternate",
+    "source_id": "bridge_bridge_042977",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "1f587b77763c1932e61e545fdccdace0544c6c0ead85def94bb1d6a6a0f91661",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_042977/handroom/seed2027/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_007089_alternate.gif",
+    "example_id": "bridge_bridge_007089_alternate",
+    "source_id": "bridge_bridge_007089",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "e84ea6c345201104fdfe407348114da8ff44005b964d03b565283d7b4f54fc9e",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_007089/handroom/seed2027/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_045160_alternate.gif",
+    "example_id": "bridge_bridge_045160_alternate",
+    "source_id": "bridge_bridge_045160",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "0417210ac8ab27c26da3ce4360088d04b9b96a9d3762b77ef15f97f4fb1d8377",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_045160/handroom/seed2027/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_015993_alternate.gif",
+    "example_id": "bridge_bridge_015993_alternate",
+    "source_id": "bridge_bridge_015993",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "346affd4c07b740dd45da46cf9a4a8afa6883ea4a8628a8bcc2ffc3cfa303d4c",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_015993/handroom/seed2027/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_041207_alternate.gif",
+    "example_id": "bridge_bridge_041207_alternate",
+    "source_id": "bridge_bridge_041207",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "024fc967d72984652d517bb2543cb5a4d7b46d49052ec651dc8d6be940e31c76",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_041207/handroom/seed2027/human.mp4"
+  },
+  {
+    "file": "docs/gallery/bridge_bridge_040489_alternate.gif",
+    "example_id": "bridge_bridge_040489_alternate",
+    "source_id": "bridge_bridge_040489",
+    "dataset": "BridgeData V2",
+    "source_video_sha256": "e7da0c06f91851a8dd4bf6a4c148c2496a886ee47dd9d84def20b30af0600565",
+    "preview_max_seconds": 3,
+    "preview_fps": 5,
+    "full_video": "https://robot-human-video-lab.panmiao307.chatgpt.site/assets/bridge_bridge_040489/handroom/seed2027/human.mp4"
+  }
+]

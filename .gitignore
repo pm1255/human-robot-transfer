@@ -15,3 +15,8 @@ checkpoints/
 .DS_Store
 ._*
 .pytest_cache/
+
+outputs/
+third_party/
+.venv-vace/
+*.egg-info/

@@ -55,7 +55,7 @@ def run(a):
  for row,seed in itertools.product(rows,a.seeds):
   a.seed=seed
   if a.only and row['id']!=a.only:continue
-  folder=ROOT/'inputs'/row['id'];output=ROOT/'results'/('1.3B_'+a.variant)/row['id']/f'seed{a.seed}';output.mkdir(parents=True,exist_ok=True)
+  folder=ROOT/'inputs'/row['id'];output=ROOT/'results'/(a.model+'_'+a.variant)/row['id']/f'seed{a.seed}';output.mkdir(parents=True,exist_ok=True)
   if (output/'result.json').exists():continue
   source_data=np.load(folder/'source_frames.npz');fps=float(source_data['fps']);raw=source_data['frames'];mask=np.load(folder/'masks.npz')['edit_mask']
   if a.variant=='handroom':
@@ -74,7 +74,7 @@ def run(a):
   src=torch.from_numpy(masked_source).permute(3,0,1,2).float().cuda()/127.5-1
   masks=torch.from_numpy(m.copy()).unsqueeze(0).float().cuda()/255
   reference=torch.from_numpy(ref.copy()).permute(2,0,1).unsqueeze(1).float().cuda()/127.5-1
-  prompt=PROMPTS[row['id']]+' Replace the robotic manipulator with the human hand shown in the reference image. Follow the source action timing and object motion precisely. Photorealistic skin, consistent hand identity, continuous movement.'
+  prompt=(row.get('generation_prompt') or PROMPTS[row['id']])+' Replace the robotic manipulator with the human hand shown in the reference image. Follow the source action timing and object motion precisely. Photorealistic skin, consistent hand identity, continuous movement.'
   start=time.time();print('GENERATE',row['id'],count,a.size,a.seed,flush=True)
   with torch.inference_mode():
    video=pipe.generate(prompt,[src],[masks],[[reference]],size=(a.size,a.size),frame_num=count,shift=16,sampling_steps=a.steps,guide_scale=5.,n_prompt=NEGATIVE,seed=a.seed,offload_model=True)
@@ -88,7 +88,7 @@ def run(a):
   pick=np.linspace(0,count-1,8).astype(int)
   contact=np.concatenate([np.concatenate([source[i],composited[i]],axis=0) for i in pick],axis=1)
   Image.fromarray(contact).save(output/'contact_sheet.jpg',quality=90)
-  data={'id':row['id'],'variant':a.variant,'mask_sha256':hashlib.sha256(mask.tobytes()).hexdigest(),'mask_coverage':float((mask>0).mean()),'model':model_name,'seed':a.seed,'steps':a.steps,'size':a.size,'frames':count,'fps':16,'source_fps':fps,'frame_indices':indices.tolist(),'source_timestamps':ts.tolist(),'source_sha256':sha(folder/'source.mp4'),'reference_sha256':sha(refpath),'prompt':prompt,'negative_prompt':NEGATIVE,'elapsed_seconds':time.time()-start,'peak_memory_gib':torch.cuda.max_memory_allocated()/2**30,'background_composited':True,'masked_input_fill':128,'paired_alignment_verified':False,'training_eligible':False,'source_dataset':'Bridge','source_label_semantics':'realized TCP states, not native robot command actions'}
+  data={'id':row['id'],'variant':a.variant,'mask_sha256':hashlib.sha256(mask.tobytes()).hexdigest(),'mask_coverage':float((mask>0).mean()),'model':model_name,'seed':a.seed,'steps':a.steps,'size':a.size,'frames':count,'fps':16,'source_fps':fps,'frame_indices':indices.tolist(),'source_timestamps':ts.tolist(),'source_sha256':sha(folder/'source.mp4'),'reference_sha256':sha(refpath),'prompt':prompt,'negative_prompt':NEGATIVE,'elapsed_seconds':time.time()-start,'peak_memory_gib':torch.cuda.max_memory_allocated()/2**30,'background_composited':True,'masked_input_fill':128,'paired_alignment_verified':False,'training_eligible':False,'source_dataset':row.get('source_dataset','Bridge'),'source_label_semantics':('not supplied; no action labels inferred' if row.get('source_dataset')=='user_supplied' else 'realized TCP states, not native robot command actions')}
   (output/'result.json').write_text(json.dumps(data,indent=2));print('RESULT_DONE',str(output),time.time()-start,flush=True)
   del src,masks,reference,video;gc.collect();torch.cuda.empty_cache()
  (ROOT/('GENERATION_'+a.model+'_DONE.json')).write_text(json.dumps({'variant':a.variant,'mask_sha256':hashlib.sha256(mask.tobytes()).hexdigest(),'mask_coverage':float((mask>0).mean()),'model':model_name,'seed':a.seed}))

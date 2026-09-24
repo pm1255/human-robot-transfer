@@ -100,7 +100,7 @@ def assets():
         json.dumps(
             {
                 "robot": "RoboTwin Aloha / AgileX ARX5 follower arm",
-                "source": "embody-eval: /user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/assets/embodiments/aloha-agilex",
+                "source": str(ASSET.resolve()),
                 "urdf_sha256": hashlib.sha256(
                     (ASSET / "model.urdf").read_bytes()
                 ).hexdigest(),
