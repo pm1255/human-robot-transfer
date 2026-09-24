@@ -1,0 +1,462 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "af442884804cdd96d4bfd9115c616e3f0cbda1df7eef1c4728ff4c8a2ce20838"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "b32f69c35dc857ba40ca52b33880b433a3174c7d2ba9f8ad1a3a06d50178b804"
+  },
+  {
+    "path": "OPTIMIZATION.md",
+    "sha256": "526f2f9dd9e7f9684ee6a2d0af1d5486ef69c402119553bcf0df3733a38dd4f1"
+  },
+  {
+    "path": "robot2human/segment_expanded.py",
+    "sha256": "a17dc6d1caff78c3a9ea882797cfaaf55d888182310d92873cf96749a6dae317"
+  },
+  {
+    "path": "robot2human/prepare_inputs.py",
+    "sha256": "273a1540d9b6cacd19e314080121af04790ed2853dab9b7155c37ea334666c45"
+  },
+  {
+    "path": "robot2human/generate.py",
+    "sha256": "b1efdf4eebbb533241c3b4ddd6811010f416918f8bfd4f3e8d50dbcb5132c29d"
+  },
+  {
+    "path": "robot2human/run_expanded.sh",
+    "sha256": "24f79369e9510f2762f87276b91c82206e59acfe8c90c1070ae4fd0de0b9587a"
+  },
+  {
+    "path": "robot2human/package_pairs.py",
+    "sha256": "0cba56f28655fe2cb2e846b3a80ed405136c207bdb692465238a86ff7972044f"
+  },
+  {
+    "path": "robot2human/run_generation_14B.sh",
+    "sha256": "0e8737e93a3c71a5c6ed86c1ce6f6baaf3bccefcc3b7689c7be4fee02a5fc55d"
+  },
+  {
+    "path": "robot2human/export_labels.py",
+    "sha256": "7fed79e54780947ca9d09df2244346af3daac13b1120c94c0532c9d73d40d45d"
+  },
+  {
+    "path": "robot2human/README.md",
+    "sha256": "2879092e2d60611ce6e7227446b505ff8cea1fe56b5605e1808cec2e880fab52"
+  },
+  {
+    "path": "robot2human/download_ranges.py",
+    "sha256": "51210caafcd63b094ec6423cfd659ba7bfd6387cbaf27f7f178a8187e3d869b6"
+  },
+  {
+    "path": "robot2human/refine_can_mask.py",
+    "sha256": "93e5622c1db8ca7f794e368c7cc1e8269cc0b3badeaca0d821546a818f7e6492"
+  },
+  {
+    "path": "robot2human/package_expanded.py",
+    "sha256": "793848891dac6aa1b15c32b0f72de4fa15ed4a95005e052b46d3cb03e1909e48"
+  },
+  {
+    "path": "robot2human/generate_expanded.py",
+    "sha256": "23778d58b0d9b2491a77103fae86737f12b05dc1eb70818c1ce99e3539175937"
+  },
+  {
+    "path": "robot2human/segment.py",
+    "sha256": "aff4e293a19f33ffcff12b9e4de64126bb27b934a33893ad18b58c7d516e2681"
+  },
+  {
+    "path": "robot2human/reference_image_prompts.json",
+    "sha256": "d7756d793cf538980de7671849a344bb5adcfcedbe0eb7b32107a7791266bca6"
+  },
+  {
+    "path": "robot2human/run_generation.sh",
+    "sha256": "939a88405030095ab03787beabe4483a6fa169b4590b2f84c5ea01300ccc6293"
+  },
+  {
+    "path": "robot2human/run_can_refined.sh",
+    "sha256": "4473960671d004c6092bfab610568b2778eb2ad31d2c9fdfccc69053dd7a53f6"
+  },
+  {
+    "path": "human2robot/pyproject.toml",
+    "sha256": "d6a4cf4a20c009b6d664c86b750cf3d8ccd9495ba2533d4817075633587df20d"
+  },
+  {
+    "path": "human2robot/README.md",
+    "sha256": "04cdda567335a14c7d0cac03e6e39abf21cfda1545978494d803cc4f18ee7884"
+  },
+  {
+    "path": "human2robot/h2r/repair.py",
+    "sha256": "b007f3a721823952eb83f76327331fa3101ef06b75fccffaf03ca080a36ec680"
+  },
+  {
+    "path": "human2robot/h2r/kinematics.py",
+    "sha256": "469b5d512a6470e7d724438ad599bd80ada7eb2c06162691a5b7ddabaea4d905"
+  },
+  {
+    "path": "human2robot/h2r/vision.py",
+    "sha256": "5142e759ee1c0208e19f8e02f77425e71639fd883fec2f5ce358d04b690f9555"
+  },
+  {
+    "path": "human2robot/h2r/__init__.py",
+    "sha256": "3e94c0405b9fb9cf34dc0f38a300b1a01759d16e3bab7c33d6bd1ebe1b2fb957"
+  },
+  {
+    "path": "human2robot/h2r/export.py",
+    "sha256": "b908e323c98aea94622253e5d6c30ea987e47578dce6954cc7768cd59018f575"
+  },
+  {
+    "path": "human2robot/h2r/cli.py",
+    "sha256": "aedd4baf0585efd347426ba3781c2c86ee6fbba0dd82df9fbac1de5296f03b75"
+  },
+  {
+    "path": "human2robot/h2r/pipeline.py",
+    "sha256": "6ade529ea94e003acf16e815e43636dace56db077e5f6d4610026853d2d1967f"
+  },
+  {
+    "path": "human2robot/h2r/geometry.py",
+    "sha256": "3ae24f3329963e493c79275235d9579c471b24b5e6102a192387bef4d7bb15d7"
+  },
+  {
+    "path": "human2robot/h2r/fixtures.py",
+    "sha256": "3f6d26a3197f715a0f344e844ec633a2b31ce7b8d4b3a5182f1bf4ecba6d51e2"
+  },
+  {
+    "path": "human2robot/h2r/schema.py",
+    "sha256": "c4e01fd4c916bad6cd085f941ab4478a91512268bb21b620ac1688fb525ea89b"
+  },
+  {
+    "path": "human2robot/tests/test_surface_render.py",
+    "sha256": "1e6f2f2ca32efc3f20d3e716f944327ade8d0e311ec77b9a288eb69df569844d"
+  },
+  {
+    "path": "human2robot/tests/test_pipeline.py",
+    "sha256": "d29b30d8bec2f3295c6efbc515963d8f8a606f61b64ac2b77d4d09e752554189"
+  },
+  {
+    "path": "human2robot/tests/test_v2.py",
+    "sha256": "2e1e6f8fea800c4064251ee74d8daf0bbd2d64fbb220288713508f3b16fc4f3a"
+  },
+  {
+    "path": "human2robot/docs/\u6a21\u578b\u8eab\u4efd\u4e0e\u8bad\u7ec3\u660e\u7ec6.md",
+    "sha256": "6f449a6fc08952eaaf1f88a66b0290eb5c56bbcf4b0ed4265b853f68c9c88a15"
+  },
+  {
+    "path": "human2robot/docs/V2\u5b9e\u9a8c\u534f\u8bae.md",
+    "sha256": "c80f40629e79b8ef05fb7ee9f2d2b26b045553981c7e9aab0070125c359a43a8"
+  },
+  {
+    "path": "human2robot/docs/\u5939\u722a\u4e00\u4e07\u6837\u672c\u5bf9\u7167\u5b9e\u9a8c.md",
+    "sha256": "e8653d2b1f035c0fb0ec2b6c40e0cee97fdc0bfd2eb33939b5c147b3c8ebd30a"
+  },
+  {
+    "path": "human2robot/docs/\u9a8c\u8bc1\u7ed3\u679c.md",
+    "sha256": "ed03c75e95ad03564b853c608439b3dfaf296b708573886281c268b2e4429471"
+  },
+  {
+    "path": "human2robot/docs/\u65b9\u6848.md",
+    "sha256": "f3d34b1ff37182dd6f02d6496cf00a1070244ab3f9320059708679770976a4ff"
+  },
+  {
+    "path": "human2robot/docs/\u753b\u9762\u8f6c\u6362\u9a8c\u8bc1.md",
+    "sha256": "458157e3d95d4aca05e8dadf0ff0563bb9b122d47ffc01432c5615aa5eb7e089"
+  },
+  {
+    "path": "human2robot/docs/\u5b9e\u9a8c\u4e0e\u8d44\u6e90.md",
+    "sha256": "367bd4bbd5aaa8cf58a0ba088a00277089787f8ada722e3244f8a5dc4afefe59"
+  },
+  {
+    "path": "human2robot/docs/Wan\u8bed\u8a00\u89c6\u9891\u52a8\u4f5c\u5b9e\u9a8c.md",
+    "sha256": "2766acef370bffa7899ca0dfe700bf4afbc124477da672d76bd378e934dd5453"
+  },
+  {
+    "path": "human2robot/docs/\u6307\u6807\u4e0e\u53ef\u89c6\u5316\u53e3\u5f84.md",
+    "sha256": "256f87fb0f4bac56d6c07b94285a6891d01c8c4637974f33d7e20cecd315f4cb"
+  },
+  {
+    "path": "human2robot/docs/Aloha\u5b9e\u4f53\u53ef\u89c6\u5316\u66f4\u65b0.md",
+    "sha256": "e5331f42258b06da4ead04eb94bd3ad56591da650c4eb6727d2fd93682c9fff5"
+  },
+  {
+    "path": "human2robot/v2/audit_aloha.py",
+    "sha256": "59e3ddd52b4def8d125f407321f1395a885cc6d726731bf3b3c69eb3780f0217"
+  },
+  {
+    "path": "human2robot/v2/run_eval.py",
+    "sha256": "d4ccd0605fc09574a2bf4a30d05aaa757db08211d9bafc5d264ddcc71390f1c3"
+  },
+  {
+    "path": "human2robot/v2/package_eval.py",
+    "sha256": "31d125a8e49328ba2dd1057d33cf69bfda9bd9b81d52c53760b7f03970b6703b"
+  },
+  {
+    "path": "human2robot/v2/review_gate.py",
+    "sha256": "a0a786beafdfb69b08a18420434ec0bfc0bbef72b74df544fa33774a239e9fe3"
+  },
+  {
+    "path": "human2robot/v2/surface_renderer.py",
+    "sha256": "6c513138123517b0cb995dff5e721281085f9020c62d57a8d27ed5236f742b6e"
+  },
+  {
+    "path": "human2robot/v2/build_experiment_card.py",
+    "sha256": "2c4a0a696e4112e1563cd6a9fcc0abaddc6880af94212ab2a02555ec0d42f41c"
+  },
+  {
+    "path": "human2robot/v2/policy.py",
+    "sha256": "7b20e95dc918fa9405ca8086d128bdb5735a6f97d33632d69d74d1b218a99111"
+  },
+  {
+    "path": "human2robot/v2/__init__.py",
+    "sha256": "50532d7116c68a095b5f55a931efca22ba8450aae577a37449db302fb0f63d3e"
+  },
+  {
+    "path": "human2robot/v2/build_results.py",
+    "sha256": "ccbfa546c86c661ffa515780c10e2f7b23d8bd00092a8d4ff0cb651ec48f6f4e"
+  },
+  {
+    "path": "human2robot/v2/annotate.py",
+    "sha256": "71e86bf95b4659db292b9b68f91c2da4b0827acf5d9b8db9417019faea7e7bed"
+  },
+  {
+    "path": "human2robot/v2/audit_results.py",
+    "sha256": "ad7a71c11c526eba855dbaed6926ddfbfbf32e064f6d975618c693e90bedf55d"
+  },
+  {
+    "path": "human2robot/v2/run_train_absolute.sh",
+    "sha256": "54658254dc47983c7d34cc5487bfe40111004fc468255cea1fa4d3cda6bf1d55"
+  },
+  {
+    "path": "human2robot/v2/audit_conversion.py",
+    "sha256": "ed69a412f861123fd9f4354b107a47d153662968784dbe3f71ed4bfe326829d5"
+  },
+  {
+    "path": "human2robot/v2/run_eval.sh",
+    "sha256": "622c80f271b853d12ba3ae7659fcce9bcad4a8c109802f51200f0941581d7443"
+  },
+  {
+    "path": "human2robot/v2/train.py",
+    "sha256": "f256684324ffd4161b377cc17a9746eba5b7f289ab48268e2c8c50790a66bdf9"
+  },
+  {
+    "path": "human2robot/v2/run_eval_single_gpu.sh",
+    "sha256": "d1e7cf607e8a8f216ba42cd20e1f478959878f56f8b07cf61e22a6d459336b64"
+  },
+  {
+    "path": "human2robot/v2/package_evidence.py",
+    "sha256": "7181e4961b2de22fd3b0b596189afbaf3826a5c9feb2c8aab61b92e2d4ace5c7"
+  },
+  {
+    "path": "human2robot/v2/evaluate.py",
+    "sha256": "07a2af5e815a3665aa6e0acf8df40ac1aa5a2063b2222705be60a872e49a23ab"
+  },
+  {
+    "path": "human2robot/v2/build_aloha.py",
+    "sha256": "738c69215b4d3c365548d7469e3787fec047df7632adb529d7f6f57711b47999"
+  },
+  {
+    "path": "human2robot/v2/run_train.sh",
+    "sha256": "f3d3a5ca934b8bf74e4f17f45dffefd3c7a0bb846aa792b5dc374f8efb03e3fc"
+  },
+  {
+    "path": "human2robot/v2/build_review_details.py",
+    "sha256": "a7c8e5e0723de868c5f49a34fdb31b74ed3fb161aca64b8555c0902618431599"
+  },
+  {
+    "path": "human2robot/v2/render_conversion.py",
+    "sha256": "2763e50d39c8ce6bc3407fea2d0e7bcfd3757b5929c25593221362936888340b"
+  },
+  {
+    "path": "human2robot/v2/audit_human_gradient.py",
+    "sha256": "674472d2d7230e477acc9f54c2d8cfbd3688e43d414c58e4f10a51428d170039"
+  },
+  {
+    "path": "human2robot/v2/audit_review_details.py",
+    "sha256": "421da13b710b4b3731c196a41e2f37d5e90700eb3f6c45f29702c2930f82df3e"
+  },
+  {
+    "path": "human2robot/v4/run_eval.py",
+    "sha256": "aa39f2c6d76ca7227dd0982e530522ed2a9897aa5b9d413230fb6145f5b91ba1"
+  },
+  {
+    "path": "human2robot/v4/continue_train.py",
+    "sha256": "026489baf3dc6fe7df6dd339181533d6c1c896241a8492d6a1d53830fb2195ae"
+  },
+  {
+    "path": "human2robot/v4/submit.py",
+    "sha256": "cf863d04f27a89c4c43247eca9be0d1fdfd59421f0918b879fe7e034bac3cbf0"
+  },
+  {
+    "path": "human2robot/v4/policy.py",
+    "sha256": "99bee349dc019d1ab7b9d1856f66487c4afd470589633229cc0d3ba8365605c1"
+  },
+  {
+    "path": "human2robot/v4/cache.py",
+    "sha256": "25d0a89477ddd27ab30c276a9c16b2a77549e8b2e576bb9ca69a63c3ea9102ec"
+  },
+  {
+    "path": "human2robot/v4/__init__.py",
+    "sha256": "4f8ddc2359776a15618159931eeb0de04240bcde914688c41d039a28d6cc8f9b"
+  },
+  {
+    "path": "human2robot/v4/smoke.sh",
+    "sha256": "5d7c6586a2080e35c28f121704bdb5244ca24d0fd120c583d675f30f18767982"
+  },
+  {
+    "path": "human2robot/v4/native.py",
+    "sha256": "03e8372cef1a82fe419f3751b3ee1563b92e26c872add7bd736d4bad18026d6c"
+  },
+  {
+    "path": "human2robot/v4/run.sh",
+    "sha256": "473a121748ef4078a0aaf442dac272071f4b4f801c68cf1c39cb72acf35687eb"
+  },
+  {
+    "path": "human2robot/v4/model.py",
+    "sha256": "ee5e9756d03263a065fbc0e9d9a8b25415ce00b32f0e2e47e7dde5ab19e23692"
+  },
+  {
+    "path": "human2robot/v4/test_contract.py",
+    "sha256": "a09037da82c86ec1223aaefd0c475b82357aba46b1a003bbdeffebce1e802090"
+  },
+  {
+    "path": "human2robot/v4/common.py",
+    "sha256": "0323e270cb55dfcb180075bbffd13a329452cecb0369ad379915dc33ade77552"
+  },
+  {
+    "path": "human2robot/v4/train.py",
+    "sha256": "2011c26113f6251c4bf7078c799bf88c6b2349ebbee826b3aeb386b56180dcbe"
+  },
+  {
+    "path": "human2robot/v4/evaluate.py",
+    "sha256": "b9e39ea998910892c6d19f38e2a446d6c4d51504651c82671fd8b476d33280d8"
+  },
+  {
+    "path": "human2robot/v4/continue_eval.py",
+    "sha256": "11d2b7891939b39a4fdf27cfc51ff9cad4f9811667088ab74b107858a5c904f3"
+  },
+  {
+    "path": "human2robot/v4/visualize_predictions.py",
+    "sha256": "1291dd4cade077bff2027f6095d7755d8c51ae5459a96e7779edb9d94f862321"
+  },
+  {
+    "path": "human2robot/v4/prepare.py",
+    "sha256": "53c6acba8dd6ac299183fb0686bd0c851054b95078bf0d4c1daf90d23a64d7fe"
+  },
+  {
+    "path": "human2robot/v4/smoke.py",
+    "sha256": "29ad8993f3fa45dc02328835d388b811c7cf7071aca8ee35f995995ad50cf434"
+  },
+  {
+    "path": "human2robot/v3/run_evaluation.py",
+    "sha256": "08248142df99f543150b499f3b819b3c0ce05fef5c752728b11f2f9bb5f6a938"
+  },
+  {
+    "path": "human2robot/v3/run_human.sh",
+    "sha256": "4ba727941dce5f83ce5589c705df957d6f233d2f6e8c6056b3dc95aa4544569b"
+  },
+  {
+    "path": "human2robot/v3/run_real_gated.sh",
+    "sha256": "eb658a299d8c43c4999ad656581b4cb0aeb6332e7268bdaab61fb4c384e6fe5d"
+  },
+  {
+    "path": "human2robot/v3/run_real.sh",
+    "sha256": "70a4e3ff796ea027ea9fddf9fb53a279965209f984bf1fe7012f7eb411aeba6f"
+  },
+  {
+    "path": "human2robot/v3/prepare_human.py",
+    "sha256": "b0ec15418fc53ea2a76e95b89f5e4f71bca625bd4ec522b9fc21ae68de15468a"
+  },
+  {
+    "path": "human2robot/v3/pack_data.py",
+    "sha256": "17f13001eb98279b9ec86f663c9752bbe45ff78cbb8df421005ca187187fbba3"
+  },
+  {
+    "path": "human2robot/v3/prepare_real_ready.sh",
+    "sha256": "698921025c30ebb633ab6e95893ceb332272b2b24884d21a62399e737852186f"
+  },
+  {
+    "path": "human2robot/v3/policy.py",
+    "sha256": "bdf8963643f268e78d066ed9069c0f8a3df2ef9ef189a90af437660d74825334"
+  },
+  {
+    "path": "human2robot/v3/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "human2robot/v3/freeze_data.py",
+    "sha256": "af6dc05224af92c862bc489d49ff0a58825cb7367b3d30765f8f7171e607b36d"
+  },
+  {
+    "path": "human2robot/v3/submit_human_when_ready.py",
+    "sha256": "91240ec935f1670d56e3800fff6daf7a9460e46a7283c37ac6c1236d5ff7f480"
+  },
+  {
+    "path": "human2robot/v3/prepare_robot.py",
+    "sha256": "c4ebaddf6d244153c7e20197af4b1824f3722cb956de535a818597b7cd51019c"
+  },
+  {
+    "path": "human2robot/v3/common.py",
+    "sha256": "5fb489031c1a90db2fdc6fd35971d8a7b849a64c5c46cf50e728ce207afcf358"
+  },
+  {
+    "path": "human2robot/v3/summarize_eval.py",
+    "sha256": "1c98916502e5f0e001ea2468fb5f0143b107b6e21d347002b63add9c7f760c5c"
+  },
+  {
+    "path": "human2robot/v3/train.py",
+    "sha256": "5665fa37466993c366f542274630bfcd52073f324bcf706cd8303467e3ebedcc"
+  },
+  {
+    "path": "human2robot/v3/evaluate.py",
+    "sha256": "1196e45a61d333f6109262e066e6f2efa56e6b761a1560d723007a3189546bec"
+  },
+  {
+    "path": "human2robot/v3/submit_eval_when_ready.py",
+    "sha256": "316e62e69f01838b967ea4663903fd59f264c3a8160d288d3cb248e4b8795248"
+  },
+  {
+    "path": "human2robot/v3/test_geometry.py",
+    "sha256": "431c60e65f7cc4411d4b82bba01858769743a1de7aa48450447b7eef8d3948a5"
+  },
+  {
+    "path": "human2robot/v3/smoke.py",
+    "sha256": "613a67b9f4e5814b984f1aacf70c9f43df7302c8f8a1b58d9f36230d8fbe5c64"
+  },
+  {
+    "path": "human2robot/configs/demo_arm.urdf",
+    "sha256": "ae6d09dd48ee02ba7e6d171d251401d4b8d402fcda3dffafaa40a233f4b3cdb4"
+  },
+  {
+    "path": "human2robot/scripts/collect_epic_bootstrap.py",
+    "sha256": "14f6c9ae13b8b0179157adf29820aeea9d2f5b09fe042bca1bde666bfbd89d08"
+  },
+  {
+    "path": "human2robot/scripts/collect_body.py",
+    "sha256": "ea4d2afe77d800fbc3cc390277db26f558fa356e95cc2e3606bc8037fb9fe1a9"
+  },
+  {
+    "path": "human2robot/scripts/serve_review.py",
+    "sha256": "9a456a919aac65f40deba44ead3c176fc3ff9ceeabbebd57d8ec79257a514e38"
+  },
+  {
+    "path": "human2robot/scripts/collect_v2.py",
+    "sha256": "c1f203ef3dc2d1ab10687980342c45969cf01a5d59bf4b5c27f616bcacc82102"
+  },
+  {
+    "path": "human2robot/scripts/run_gpu_pilot.sh",
+    "sha256": "69622f1b5c0d1c242e1759c415f50ad70c1d378791c58df44e92b90ac3b006e4"
+  },
+  {
+    "path": "human2robot/scripts/collect_robotwin_pilot.py",
+    "sha256": "f7711cb97df1314505ebe02b33d843c1a5b6355de766d2743c265a17a2d0547f"
+  },
+  {
+    "path": "human2robot/scripts/collect_exocentric.py",
+    "sha256": "bfcef7ebdeda73630785f6d9ca23ce51d214a8a6991a4fb992342d95125870a9"
+  },
+  {
+    "path": "human2robot/scripts/train_pilot.py",
+    "sha256": "02c99e08b91e2e9ec1ff4cc7abb6a341aeaa734f9e1596e8b289ad1f1bdfae0f"
+  },
+  {
+    "path": "human2robot/scripts/correct_proxy_timestamps.py",
+    "sha256": "63c22a5d56524e210ef704a8708f1cb0bb558832595e5a25482bf76c1878790e"
+  }
+]

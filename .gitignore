@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+models/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.mp4
+*.npz
+*.tar.gz
+.DS_Store

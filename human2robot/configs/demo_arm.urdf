@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- Educational six-axis arm, NOT an Aloha/Piper hardware description. -->
+<robot name="reference_arm_6dof">
+  <link name="base"/><link name="shoulder"/><link name="upper"/><link name="forearm"/>
+  <link name="wrist1"/><link name="wrist2"/><link name="flange"/><link name="tcp"/>
+  <joint name="shoulder_yaw" type="revolute"><parent link="base"/><child link="shoulder"/><origin xyz="0 0 0.16"/><axis xyz="0 0 1"/><limit lower="-2.8" upper="2.8" velocity="2" effort="100"/></joint>
+  <joint name="shoulder_pitch" type="revolute"><parent link="shoulder"/><child link="upper"/><axis xyz="0 1 0"/><limit lower="-2.2" upper="2.2" velocity="2" effort="100"/></joint>
+  <joint name="elbow_pitch" type="revolute"><parent link="upper"/><child link="forearm"/><origin xyz="0.28 0 0"/><axis xyz="0 1 0"/><limit lower="-2.6" upper="2.6" velocity="2.5" effort="100"/></joint>
+  <joint name="wrist_roll" type="revolute"><parent link="forearm"/><child link="wrist1"/><origin xyz="0.24 0 0"/><axis xyz="1 0 0"/><limit lower="-3.0" upper="3.0" velocity="3" effort="30"/></joint>
+  <joint name="wrist_pitch" type="revolute"><parent link="wrist1"/><child link="wrist2"/><origin xyz="0.05 0 0"/><axis xyz="0 1 0"/><limit lower="-2.5" upper="2.5" velocity="3" effort="30"/></joint>
+  <joint name="wrist_yaw" type="revolute"><parent link="wrist2"/><child link="flange"/><axis xyz="0 0 1"/><limit lower="-3.0" upper="3.0" velocity="3" effort="30"/></joint>
+  <joint name="tool_offset" type="fixed"><parent link="flange"/><child link="tcp"/><origin xyz="0 0 0.09"/></joint>
+</robot>
