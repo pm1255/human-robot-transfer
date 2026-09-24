@@ -36,3 +36,5 @@ python -m pytest -q
 ## 第三方项目
 
 依赖 [Wan2.1](https://github.com/Wan-Video/Wan2.1)、[VACE](https://github.com/ali-vilab/VACE)、[SAM2](https://github.com/facebookresearch/sam2)、MediaPipe、MuJoCo、RoboTwin 等；安装和使用遵循各自许可证。数据和模型权利不因本仓库上传而改变。仓库没有替第三方素材授予新许可证。
+
+服务器实际运行的 v2/v3 副本另存于 `runtime_snapshots/`，与整理后的主源码区分。网页源码在 `website/`，旧标注查看器在 `human2robot/web/`；大体积媒体不在代码仓库中。

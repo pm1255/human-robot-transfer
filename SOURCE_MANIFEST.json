@@ -5,15 +5,131 @@
   },
   {
     "path": "README.md",
-    "sha256": "af442884804cdd96d4bfd9115c616e3f0cbda1df7eef1c4728ff4c8a2ce20838"
+    "sha256": "6e9a9af6503ed353fa68dd1f2f4267448e22c31a24b798bfad4742bf4ddc0c7d"
   },
   {
     "path": ".gitignore",
-    "sha256": "b32f69c35dc857ba40ca52b33880b433a3174c7d2ba9f8ad1a3a06d50178b804"
+    "sha256": "02fa06c1d13d3a307055ca9bee43984d49699920680495ae45a33e77178ed365"
   },
   {
     "path": "OPTIMIZATION.md",
     "sha256": "526f2f9dd9e7f9684ee6a2d0af1d5486ef69c402119553bcf0df3733a38dd4f1"
+  },
+  {
+    "path": "runtime_snapshots/README.md",
+    "sha256": "29d3c0dc445e842133d08db0cee4b2d3826bec28f12968eef5bbed813c33cf90"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/run_evaluation.py",
+    "sha256": "08248142df99f543150b499f3b819b3c0ce05fef5c752728b11f2f9bb5f6a938"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/run_human.sh",
+    "sha256": "4ba727941dce5f83ce5589c705df957d6f233d2f6e8c6056b3dc95aa4544569b"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/run_real_gated.sh",
+    "sha256": "eb658a299d8c43c4999ad656581b4cb0aeb6332e7268bdaab61fb4c384e6fe5d"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/run_real.sh",
+    "sha256": "70a4e3ff796ea027ea9fddf9fb53a279965209f984bf1fe7012f7eb411aeba6f"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/prepare_human.py",
+    "sha256": "b0ec15418fc53ea2a76e95b89f5e4f71bca625bd4ec522b9fc21ae68de15468a"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/pack_data.py",
+    "sha256": "17f13001eb98279b9ec86f663c9752bbe45ff78cbb8df421005ca187187fbba3"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/prepare_real_ready.sh",
+    "sha256": "698921025c30ebb633ab6e95893ceb332272b2b24884d21a62399e737852186f"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/policy.py",
+    "sha256": "bdf8963643f268e78d066ed9069c0f8a3df2ef9ef189a90af437660d74825334"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/freeze_data.py",
+    "sha256": "af6dc05224af92c862bc489d49ff0a58825cb7367b3d30765f8f7171e607b36d"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/submit_human_when_ready.py",
+    "sha256": "91240ec935f1670d56e3800fff6daf7a9460e46a7283c37ac6c1236d5ff7f480"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/prepare_robot.py",
+    "sha256": "c4ebaddf6d244153c7e20197af4b1824f3722cb956de535a818597b7cd51019c"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/common.py",
+    "sha256": "5fb489031c1a90db2fdc6fd35971d8a7b849a64c5c46cf50e728ce207afcf358"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/summarize_eval.py",
+    "sha256": "1c98916502e5f0e001ea2468fb5f0143b107b6e21d347002b63add9c7f760c5c"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/train.py",
+    "sha256": "5665fa37466993c366f542274630bfcd52073f324bcf706cd8303467e3ebedcc"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/evaluate.py",
+    "sha256": "1196e45a61d333f6109262e066e6f2efa56e6b761a1560d723007a3189546bec"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/submit_eval_when_ready.py",
+    "sha256": "316e62e69f01838b967ea4663903fd59f264c3a8160d288d3cb248e4b8795248"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/test_geometry.py",
+    "sha256": "431c60e65f7cc4411d4b82bba01858769743a1de7aa48450447b7eef8d3948a5"
+  },
+  {
+    "path": "runtime_snapshots/v3-runtime/v3/smoke.py",
+    "sha256": "613a67b9f4e5814b984f1aacf70c9f43df7302c8f8a1b58d9f36230d8fbe5c64"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/policy.py",
+    "sha256": "3cf27f471683aea9da0833a9fe6a5afdeb76f59522f8a1239ad4230faa2b1a5a"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/__init__.py",
+    "sha256": "50532d7116c68a095b5f55a931efca22ba8450aae577a37449db302fb0f63d3e"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/annotate.py",
+    "sha256": "5024ebfe41fd32e34f489fde4aa21c0412ff21e71d2a51c12d66e9d6efdfe594"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/run_train_absolute.sh",
+    "sha256": "54658254dc47983c7d34cc5487bfe40111004fc468255cea1fa4d3cda6bf1d55"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/train.py",
+    "sha256": "cb526f404113062e62d6105f134f7a3beb846862b7653f1e8925346b0d4fa29b"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/package_evidence.py",
+    "sha256": "d6607e4f413d9ed3490770fdea74bbd0f078d63347ac56eb460f4642d7406e00"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/evaluate.py",
+    "sha256": "780c71e17622fb25a74206c89a77b47eeffa558883624878f355706e999a8107"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/run_train.sh",
+    "sha256": "f3d3a5ca934b8bf74e4f17f45dffefd3c7a0bb846aa792b5dc374f8efb03e3fc"
+  },
+  {
+    "path": "runtime_snapshots/v2-runtime/v2/audit_human_gradient.py",
+    "sha256": "3895e1e4e6deec6580619ac604fbca3f1550e1719aa6b71d26013c335590e6af"
   },
   {
     "path": "robot2human/segment_expanded.py",

@@ -13,3 +13,5 @@ checkpoints/
 *.npz
 *.tar.gz
 .DS_Store
+._*
+.pytest_cache/
