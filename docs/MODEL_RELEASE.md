@@ -7,7 +7,7 @@
 - 逐文件大小、SHA-256、许可、安装路径：[manifest.json](../model_assets/manifest.json)
 - 模型仓库说明的维护来源：[MODEL_CARD.md](../model_assets/MODEL_CARD.md)
 
-清单记录需要哪些文件；Hub 文件是否已发布必须检查实际文件列表或运行检查工具。公开仓库不意味着所有模型都适用 MIT 或都可商用。
+2026-10-29 已补齐 6 个缺失文件（约 282 MB），并将模型仓库设为公开。核心清单中的 19 个可发布文件均已提供，发布版本为 [`121b226db424598c6eba2714627b7c3e15ddfa28`](https://huggingface.co/erwtwert/embodied-data-loop-models/tree/121b226db424598c6eba2714627b7c3e15ddfa28)。已有 13 个文件按哈希核对后复用。公开仓库不意味着所有模型都适用 MIT 或都可商用。
 
 ## 模型与脚本对应表
 
@@ -31,7 +31,7 @@
 python -m pip install huggingface_hub
 python tools/model_assets.py list
 
-# 按需下载；只有文件确实发布到 Hub 且当前账户有访问权限时才会成功。
+# 按需下载；公开仓库无需登录。
 python tools/model_assets.py download --component mediapipe --component moge3
 python tools/model_assets.py download --component hamer --component sam31 --component foundationpose
 
@@ -143,4 +143,4 @@ python tools/publish_model_assets.py --root /path/to/existing/project \
   --report outputs/hub_release.json
 ```
 
-该工具要求目标仓库已经存在，不自动新建同名仓库。上传前验证所有本地资产，保留旧 README 的归档，并使用远端提交号防止覆盖其他并发更新。MANO 不在上传清单中。已有的其他文件不会被删除；将私有仓库公开前，维护者还需核对那些已有文件。
+该工具要求目标仓库已经存在，不自动新建同名仓库。先按清单核对远端文件，仅对缺失或不匹配文件要求本地副本并验证完整 SHA-256；已验证的远端文件不会重新上传。保留旧 README 和旧清单的归档，并使用远端提交号防止覆盖其他并发更新。MANO 不在上传清单中。已有的其他文件不会被删除；将私有仓库公开前，维护者还需核对那些已有文件。

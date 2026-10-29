@@ -1,7 +1,7 @@
 """Audit or publish the manifest's exact model files to the companion Hub repo.
 
 Default mode is read-only: compare existing Hub objects with the manifest.
---publish uploads missing/mismatched objects after verifying every local file.
+--publish uploads missing/mismatched objects after verifying each source file.
 --make-public explicitly changes visibility after the upload has succeeded.
 Authentication uses HF_TOKEN or the standard Hugging Face login store.
 """
@@ -62,12 +62,11 @@ def main():
             cached = hf_hub_download(args.repo_id, asset['hub_path'], revision=info.sha, token=token)
             matches = sha256(cached) == asset['sha256']
         rows.append(dict(path=asset['hub_path'], remote_status='verified' if matches else 'missing_or_different'))
-        if args.publish:
+        if args.publish and not matches:
             source = source_path(asset, root, sam_root)
             if not source.is_file() or source.stat().st_size != asset['bytes'] or sha256(source) != asset['sha256']:
                 raise ValueError('Missing or changed local model asset: ' + str(source))
-            if not matches:
-                operations.append(CommitOperationAdd(path_in_repo=asset['hub_path'], path_or_fileobj=source))
+            operations.append(CommitOperationAdd(path_in_repo=asset['hub_path'], path_or_fileobj=source))
     result = dict(repository=args.repo_id, private_before=info.private, revision_before=info.sha,
                   required_files=rows, existing_files=sorted(existing), excluded=['MANO_RIGHT.pkl'],
                   published=False)
@@ -79,17 +78,28 @@ def main():
     report()
     if args.publish:
         card = (REPO / 'model_assets/MODEL_CARD.md').read_bytes()
-        if 'README.md' in existing:
-            from huggingface_hub import hf_hub_download
-            old = Path(hf_hub_download(args.repo_id, 'README.md', revision=info.sha, token=token)).read_bytes()
-            if old != card:
-                operations.append(CommitOperationAdd(path_in_repo=f'archive/README-before-{info.sha}.md', path_or_fileobj=old))
+        for name in ['README.md', 'model_manifest.json']:
+            if name in existing:
+                from huggingface_hub import hf_hub_download
+                old = Path(hf_hub_download(args.repo_id, name, revision=info.sha, token=token)).read_bytes()
+                if name != 'README.md' or old != card:
+                    suffix = Path(name).suffix
+                    archive = f'archive/{Path(name).stem}-before-{info.sha}{suffix}'
+                    operations.append(CommitOperationAdd(path_in_repo=archive, path_or_fileobj=old))
+        legacy = dict(repository=args.repo_id, canonical_manifest='manifest.json',
+                      scope='Core mirrored model assets; MANO and optional upstream models are excluded',
+                      models=[dict(path=row['hub_path'], size_bytes=row['bytes'], sha256=row['sha256'])
+                              for row in assets])
         operations.extend([
             CommitOperationAdd(path_in_repo='README.md', path_or_fileobj=card),
             CommitOperationAdd(path_in_repo='manifest.json', path_or_fileobj=(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n').encode()),
+            CommitOperationAdd(path_in_repo='model_manifest.json', path_or_fileobj=(json.dumps(legacy, indent=2) + '\n').encode()),
         ])
         for path in sorted((REPO / 'model_assets/licenses').glob('*.txt')):
             operations.append(CommitOperationAdd(path_in_repo='licenses/' + path.name, path_or_fileobj=path))
+        docs = REPO / 'model_assets/hub_docs'
+        for path in sorted(docs.rglob('*.md')):
+            operations.append(CommitOperationAdd(path_in_repo=path.relative_to(docs).as_posix(), path_or_fileobj=path))
         commit = api.create_commit(repo_id=args.repo_id, operations=operations,
                                    parent_commit=info.sha,
                                    commit_message='Publish annotation model assets with hashes, licenses, and GitHub script links')

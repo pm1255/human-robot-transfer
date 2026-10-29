@@ -5,7 +5,7 @@
 ## 代码与模型入口（2026-10-29）
 
 - **全部维护代码**：[GitHub · pm1255/human-robot-transfer](https://github.com/pm1255/human-robot-transfer)。本次纳入手型修复、SAM 3.1 / MoGe-3 标注、自动质检、统一标注网页、衣物转换实验及服务器运行快照。
-- **模型发布仓库**：[Hugging Face · erwtwert/embodied-data-loop-models](https://huggingface.co/erwtwert/embodied-data-loop-models)。实际可下载文件以该仓库的文件列表为准；[模型清单](model_assets/manifest.json)记录本流程所需文件与校验值，不代表它们已经全部上传。
+- **公开模型仓库**：[Hugging Face · erwtwert/embodied-data-loop-models](https://huggingface.co/erwtwert/embodied-data-loop-models)。2026-10-29 已补齐并公开 19 个核心权重/配置文件，约 7.97 GB；[模型清单](model_assets/manifest.json)记录大小、校验值和安装路径。MANO 需单独获取，可选 VACE/机器人资产见说明。
 - **从模型找到配套脚本**：[模型与 GitHub 脚本对应表、安装和运行说明](docs/MODEL_RELEASE.md)。`python tools/model_assets.py check` 检查当前机器是否缺权重或配置文件。
 - **完整运行版本留档**：[2026-10-29 服务器快照](runtime_snapshots/annotation-20261029/README.md)。历史实验脚本依赖原数据路径，不能直接当作通用的一键流程。
 

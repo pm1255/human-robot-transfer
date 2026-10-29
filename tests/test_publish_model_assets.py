@@ -1,6 +1,10 @@
 import importlib.util
+import contextlib
+import io
+import json
 from pathlib import Path
 import sys
+import tempfile
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
@@ -34,6 +38,35 @@ class PublishAssetTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'login is required'):
                 publisher.main()
             api.assert_not_called()
+
+    def test_verified_remote_asset_needs_no_local_copy_or_upload(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            model_dir = root / 'model_assets'
+            model_dir.mkdir()
+            asset = dict(component='hamer', local_path='models/missing.ckpt',
+                         hub_path='hamer/model.ckpt', bytes=4, sha256='expected', delivery='mirror')
+            (model_dir / 'manifest.json').write_text(json.dumps(dict(assets=[asset])))
+            (model_dir / 'MODEL_CARD.md').write_text('# Model card\n')
+            remote = SimpleNamespace(rfilename=asset['hub_path'], size=4,
+                                     lfs=SimpleNamespace(sha256='expected'))
+            info = SimpleNamespace(siblings=[remote], sha='before', private=True)
+            with patch.object(sys, 'argv', ['publish_model_assets.py', '--publish', '--root', str(root)]), \
+                 patch.object(publisher, 'REPO', root), \
+                 patch('huggingface_hub.get_token', return_value='test-fixture'), \
+                 patch('huggingface_hub.HfApi') as factory, \
+                 patch.object(publisher, 'source_path') as source, \
+                 contextlib.redirect_stdout(io.StringIO()):
+                api = factory.return_value
+                api.model_info.return_value = info
+                api.create_commit.return_value = SimpleNamespace(oid='after')
+                publisher.main()
+                source.assert_not_called()
+                uploaded = [operation.path_in_repo for operation in api.create_commit.call_args.kwargs['operations']]
+                self.assertNotIn(asset['hub_path'], uploaded)
+                self.assertIn('README.md', uploaded)
+                self.assertIn('manifest.json', uploaded)
+                api.update_repo_settings.assert_not_called()
 
 
 if __name__ == '__main__':

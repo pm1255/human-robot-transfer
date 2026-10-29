@@ -1,7 +1,7 @@
 ---
 license: other
 license_name: component-specific-licenses
-license_link: https://github.com/pm1255/human-robot-transfer/blob/main/docs/MODEL_RELEASE.md#许可与来源
+license_link: https://github.com/pm1255/human-robot-transfer/blob/main/docs/MODEL_RELEASE.md
 language:
 - en
 - zh

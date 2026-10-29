@@ -48,7 +48,7 @@
     {
       "component": "hamer",
       "local_path": "models/hamer/hamer_ckpts/checkpoints/hamer.ckpt",
-      "hub_path": "hamer/hamer_ckpts/checkpoints/hamer.ckpt",
+      "hub_path": "hamer/hamer.ckpt",
       "bytes": 2689536166,
       "sha256": "e5cc06f294d88a92dee24e603480aab04de532b49f0e08200804ee7d90e16f53",
       "license": "MIT",
@@ -58,7 +58,7 @@
     {
       "component": "hamer",
       "local_path": "models/hamer/hamer_ckpts/model_config.yaml",
-      "hub_path": "hamer/hamer_ckpts/model_config.yaml",
+      "hub_path": "hamer/model_config.yaml",
       "bytes": 1424,
       "sha256": "85f824989f0ccb1e3ff1a72064943be3bf2b555c6759ae06dba209842db97200",
       "license": "MIT",
@@ -68,7 +68,7 @@
     {
       "component": "hamer",
       "local_path": "models/hamer/_DATA/data/mano_mean_params.npz",
-      "hub_path": "hamer/_DATA/data/mano_mean_params.npz",
+      "hub_path": "hamer/mano_mean_params.npz",
       "bytes": 1178,
       "sha256": "efc0ec58e4a5cef78f3abfb4e8f91623b8950be9eff8b8e0dbb0d036ebc63988",
       "license": "MIT",
