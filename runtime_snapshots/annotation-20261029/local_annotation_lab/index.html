@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>EgoVerse · 统一标注工作台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23176c70'/%3E%3Cpath d='M12 12h16v16H12z' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='20' cy='20' r='3' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=robot-20261020">
+  <script src="app.js?v=source-composite-20261020" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">H ↔ R</span><span>人类视频标注<span class="brand-caption">ANNOTATION LAB</span></span></a>
+    <nav aria-label="页面导航"><a href="#annotations">全部标注</a><a href="#geometry-review">逐帧复核</a><a href="#dataset-quality">数据集汇总</a></nav>
+  </header>
+  <main id="top">
+    <section class="selection" aria-labelledby="page-title">
+      <div class="heading-row"><div><p class="eyebrow">EGOVERSE / ANNOTATION LAB</p><h1 id="page-title">统一标注工作台</h1></div><span class="subtle" id="sample-count">读取中</span></div>
+      <div class="selectors"><label>数据集<select id="dataset" disabled aria-label="选择数据集"></select></label><label class="sample-select">人类视频样本<select id="sample" disabled aria-label="选择样本"></select></label><div class="selection-meta"><span class="badge neutral">人类双手</span><span id="sample-meta"></span></div></div>
+      <p class="summary-notice" id="page-status" role="status">正在读取标注资源…</p>
+      <p class="subtle resource-note">同一样本、同一时间基准，每种标注一个视频。<a href="http://127.0.0.1:16067/" target="_blank" rel="noopener">分割、几何与双臂计算记录 ↗</a> · <a href="http://127.0.0.1:16066/" target="_blank" rel="noopener">手型计算记录 ↗</a></p>
+    </section>
+
+    <section id="annotations" aria-labelledby="annotations-title">
+      <div class="heading-row annotation-heading"><div><p class="eyebrow">01 / ANNOTATIONS</p><h2 id="annotations-title">原视频与全部标注</h2></div><span class="subtle">独立视频 · 同步对照</span></div>
+      <nav id="layer-links" class="layer-links" aria-label="标注类型"></nav>
+      <div class="playback-dock">
+      <div class="playback" aria-label="同步播放控制">
+        <button id="play" class="primary" disabled aria-label="同步播放">▶ 同步播放</button>
+        <div class="frame-controls"><button id="previous" class="icon-button" disabled aria-label="上一帧">‹</button><button id="next" class="icon-button" disabled aria-label="下一帧">›</button></div>
+        <label class="sr-only" for="seek">同步视频帧</label><input id="seek" type="range" min="0" max="4833" value="0" step="1" disabled>
+        <output id="time">00:00.00 / 02:41.13</output>
+        <label class="speed-label"><span class="sr-only">播放速度</span><select id="speed" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+      </div>
+      <div class="timeline-meta"><span id="frame">第 1 / 4834 帧</span><span>统一控制全部视频；也可在卡片中单独播放。</span></div>
+      <div class="frame-status-strip"><span id="hand-frame-status">手型状态读取中</span><span id="pose-frame-status">位姿状态读取中</span><span id="semantic-frame-status">片段语义读取中</span><span id="robot-frame-status"></span></div>
+      <p id="playback-status" role="status" class="playback-message" hidden></p>
+      </div>
+      <div id="cards" class="annotation-grid"></div>
+      <article id="semantic-review" class="coverage-card">
+        <div class="heading-row"><h3>片段语义 · 随时间切换</h3><span class="badge review">新分段 · 待复核</span></div>
+        <p id="semantic-summary" class="subtle resource-note" role="status">正在读取动作片段…</p>
+        <canvas id="semantic-timeline" width="1400" height="40" aria-label="语义动作时间带；可用片段选择器定位"></canvas>
+        <div class="frame-jump"><label for="semantic-segment">选择动作片段</label><select id="semantic-segment" disabled></select><button id="semantic-prev" class="text-button" disabled>上一片段</button><button id="semantic-next" class="text-button" disabled>下一片段</button></div>
+        <p id="semantic-detail" class="frame-detail"></p>
+        <details class="geometry-details"><summary>全部片段与标注来源</summary><p class="subtle resource-note">本次依据原视频每 0.5 秒抽帧重新观察分段，边界约 ±0.5 秒，尚未独立人工验收。不是恢复的历史 7 段。视野不完整的演示切换单独标出，不推断其具体展开动作。</p><div class="table-wrap semantic-table"><table><thead><tr><th>片段 / 演示</th><th>起止时间</th><th>当前动作</th><th>查看</th></tr></thead><tbody id="semantic-rows"></tbody></table></div><a href="semantic/semantic_segments.json" class="card-link">下载片段语义 JSON ↗</a></details>
+      </article>
+      <noscript><p>请启用 JavaScript 以读取标注资源并播放视频。</p></noscript>
+    </section>
+
+    <section id="sample-quality" class="quality-section" aria-labelledby="sample-quality-title">
+      <div class="heading-row"><div><p class="eyebrow">02 / SAMPLE QUALITY</p><h2 id="sample-quality-title">当前样本质检</h2></div><span class="badge review">待复核</span></div>
+      <div class="quality-grid">
+        <article class="quality-card"><span class="subtle">宽松标准 · 关节点与手型</span><h3>可查看，仍需复核</h3><p id="loose-quality"></p></article>
+        <article class="quality-card"><span class="subtle">严格标准 · 完整标注与精度</span><h3>尚未完成验收</h3><p id="strict-quality"></p></article>
+      </div>
+      <div class="coverage-card"><div class="heading-row"><h3>手型逐帧状态</h3><div class="legend"><span><i class="available-dot"></i>有输出</span><span><i class="review-dot"></i>需复核</span><span><i class="missing-dot"></i>未检测</span></div></div><canvas id="coverage" width="1200" height="40" aria-label="手型逐帧覆盖图，使用下方按钮跳转缺失或复核帧"></canvas><div class="coverage-bottom"><p id="coverage-summary"></p><div><button id="jump-missing" class="text-button">查看未检测帧</button><button id="jump-review" class="text-button">查看待复核帧</button></div></div></div>
+      <article id="geometry-review" class="coverage-card">
+        <div class="heading-row"><h3>衣物整体位姿 · 逐帧复核</h3><span class="badge review">刚体近似 · 非真值</span></div>
+        <p id="geometry-summary" class="subtle resource-note" role="status">正在读取位姿结果…</p>
+        <canvas id="geometry-timeline" width="1400" height="40" aria-label="位姿逐帧状态色带；可用下方帧号输入框跳转"></canvas>
+        <div id="geometry-legend" class="legend geometry-legend"></div>
+        <form id="frame-jump-form" class="frame-jump">
+          <label for="frame-input">帧号（从 0 开始）</label><input id="frame-input" type="number" min="0" step="1" value="600" required>
+          <button class="primary" type="submit">全部视频跳转</button><button id="geometry-rejected" class="text-button" type="button" disabled>下一个拒绝帧</button>
+        </form>
+        <p id="geometry-frame-info" class="frame-detail">位姿逐帧记录读取中。</p>
+        <details class="geometry-details"><summary>查看位姿数量、尺度与使用边界</summary>
+          <div class="table-wrap"><table><thead><tr><th>状态</th><th>帧数</th><th>含义</th></tr></thead><tbody id="geometry-counts"></tbody></table></div>
+          <p class="subtle resource-note">逐帧掩码和深度保留可见形变；单个整体位姿不能描述布料每个点的运动。失败后的等待帧保留空位姿，不插值。没有布料点的连续对应、世界坐标轨迹或机器人控制动作。</p>
+          <p id="depth-quality-note" class="subtle resource-note"></p>
+          <div class="resource-links"><a href="geometry/pose6d.json">逐帧位姿与候选 ↗</a><a href="geometry/geometry_validation.json">几何质检明细 ↗</a><a href="OBJECT_POSE_AND_EGOMATRIX.md">方法与 EgoMatrix 参考范围 ↗</a></div>
+        </details>
+      </article>
+    </section>
+
+    <section id="dataset-quality" class="quality-section" aria-labelledby="dataset-quality-title">
+      <div class="heading-row"><div><p class="eyebrow">03 / DATASET OVERVIEW</p><h2 id="dataset-quality-title">数据集汇总</h2></div><span class="subtle">当前接入的 EgoVerse 子集</span></div>
+      <div class="metrics" id="metrics"></div>
+      <div class="table-wrap"><table><thead><tr><th>样本</th><th>已接入视频</th><th>宽松质检</th><th>严格质检</th><th>建议</th></tr></thead><tbody id="dataset-rows"></tbody></table></div>
+      <p class="subtle footnote">本页统计仅覆盖已接入样本。资源缺失不代表检测失败；未检测帧也不等于已确认漏检。</p>
+    </section>
+    <footer><p>根据项目原有网页代码与共享记录重建 · 2026-10-20</p><div><a href="robot_composite_report_summary.md">原背景合成修复 ↗</a><a href="semantic_robot_report_summary.md">片段语义与双臂结果 ↗</a><a href="unified_report_summary.md">统一网页说明 ↗</a><a href="report_summary.md">手型结果与限制 ↗</a><a href="assets/multi_manifest.json">资源清单 ↗</a></div></footer>
+  </main>
+</body>
+</html>

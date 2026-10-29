@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-ROOT=${HAMER_SHARED_ROOT:-/user/panmiao/human-robot-transfer}
+ROOT=${HAMER_SHARED_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}
 OUT=${HAMER_SURFACE_OUT:-$ROOT/outputs/hand_mesh_repair_20261020/inference_v2}
 WORK=$(mktemp -d /tmp/hamer-surface.XXXXXX)
 PKG=$WORK/pkgs

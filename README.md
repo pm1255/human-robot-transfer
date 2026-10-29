@@ -2,6 +2,15 @@
 
 人类视频标注与跨本体转换的研究代码、启动工具和实际样例。
 
+## 代码与模型入口（2026-10-29）
+
+- **全部维护代码**：[GitHub · pm1255/human-robot-transfer](https://github.com/pm1255/human-robot-transfer)。本次纳入手型修复、SAM 3.1 / MoGe-3 标注、自动质检、统一标注网页、衣物转换实验及服务器运行快照。
+- **模型发布仓库**：[Hugging Face · erwtwert/embodied-data-loop-models](https://huggingface.co/erwtwert/embodied-data-loop-models)。实际可下载文件以该仓库的文件列表为准；[模型清单](model_assets/manifest.json)记录本流程所需文件与校验值，不代表它们已经全部上传。
+- **从模型找到配套脚本**：[模型与 GitHub 脚本对应表、安装和运行说明](docs/MODEL_RELEASE.md)。`python tools/model_assets.py check` 检查当前机器是否缺权重或配置文件。
+- **完整运行版本留档**：[2026-10-29 服务器快照](runtime_snapshots/annotation-20261029/README.md)。历史实验脚本依赖原数据路径，不能直接当作通用的一键流程。
+
+项目自身代码采用 MIT；第三方权重使用各自许可证。MANO 需单独获取，FoundationPose 限非商业研究/评估。现有语义分段和二维接触线索不等于训练好的通用语义、接触或抓取模型。
+
 **本页 48 个动画示例**：24 个人类标注、8 个人手→机械臂、4 个人体→机器人、12 个机器人→人手版本（后者来自 6 段源视频）。[完整效果主页：66 个结果 / 53 段源片段](https://robot-human-video-lab.panmiao307.chatgpt.site/)。
 
 预览截取前 3 秒、5 FPS；**点击动画查看完整展示视频**。标注与机器人转人均采用两列，横向三栏对照独占一行。所有画面来自实际实验，包含漏检和失败。模型标注不等于人工真值，转换结果尚未验证接触或动作等价。

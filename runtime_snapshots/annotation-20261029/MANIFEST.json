@@ -1,0 +1,585 @@
+{
+  "source": "project annotation runtime, captured 2026-10-29",
+  "files": [
+    {
+      "path": "human2robot/object_annotation/guided_redetect.py",
+      "bytes": 8508,
+      "sha256": "1259183fa20af04f058693c0135737f3f3cf13d107ef46106837fcdf01d2ed3f"
+    },
+    {
+      "path": "human2robot/object_annotation/instance_track.py",
+      "bytes": 6033,
+      "sha256": "b2121ac9e6c7efa1979e2ea0598cb07755f7cb55f8f22c7481a894426a07f73a"
+    },
+    {
+      "path": "human2robot/object_annotation/render_pose_pilot.py",
+      "bytes": 3811,
+      "sha256": "50dc0347f18e21cf715eafcb397cf0cdf3812775efac6bbe702e70d3ade69035"
+    },
+    {
+      "path": "human2robot/object_annotation/__init__.py",
+      "bytes": 65,
+      "sha256": "558f652319c86ad41b713b6b9c0a91a611d55eb15026370f238513558a675cc5"
+    },
+    {
+      "path": "human2robot/object_annotation/sam3_video.py",
+      "bytes": 10214,
+      "sha256": "f9f77e5eea34d6377ef8436fe7f72bbe9a36e62c23545ab8c5d3b00183380ab5"
+    },
+    {
+      "path": "human2robot/object_annotation/common.py",
+      "bytes": 2006,
+      "sha256": "2c546933f2f03d219cedfaa3634255bf1519b9944b7ec5a02b6aaeb66edfae1d"
+    },
+    {
+      "path": "human2robot/object_annotation/render.py",
+      "bytes": 3748,
+      "sha256": "32fc2fbd04313e8e236b23081fafa816cfc67f3a3e3223589524d7bf718f8390"
+    },
+    {
+      "path": "human2robot/object_annotation/sam3_compat.py",
+      "bytes": 3172,
+      "sha256": "92e3c11a9c297e96cd1e5e4dd9c0f58119bd732d3c7e8473c9c657511f47b472"
+    },
+    {
+      "path": "human2robot/object_annotation/depth_video.py",
+      "bytes": 5935,
+      "sha256": "d10d86b17934d807ae80ecc4a16faec4a6ec8270e2fb00384c312cf7e1da3fd4"
+    },
+    {
+      "path": "human2robot/object_annotation/cloth_geometry.py",
+      "bytes": 3599,
+      "sha256": "5d902884dda28345e0524756263d3a7d737fc09beb0b2759dad742acdf252086"
+    },
+    {
+      "path": "human2robot/object_annotation/foundation_cloth.py",
+      "bytes": 10636,
+      "sha256": "90e074700ab6d335eae48380c802e708ab920648e372d8a864929bfc5fe07915"
+    },
+    {
+      "path": "human2robot/object_annotation/refine_missing.py",
+      "bytes": 6510,
+      "sha256": "6a5c7ca0af6ae039949f076d01fd9b476a139b64058f4a13ca92dd259d73cf33"
+    },
+    {
+      "path": "human2robot/object_annotation/adaptive_segment.py",
+      "bytes": 12124,
+      "sha256": "47f227d10ad403de98d1d16c072fb555db460832453208c0af6043e8e0e7fb0e"
+    },
+    {
+      "path": "human2robot/object_annotation/publish.py",
+      "bytes": 4191,
+      "sha256": "18e547ba2fea6419c259badc4f1c6f610cbc70039023e091512a4386c6aa865e"
+    },
+    {
+      "path": "human2robot/object_annotation/foundation_preflight.py",
+      "bytes": 1712,
+      "sha256": "4d6416f557d2242ab066be3c954dca864ea145d3c68b80af4cf2bf75d7e7f365"
+    },
+    {
+      "path": "human2robot/object_annotation/flex_compat.py",
+      "bytes": 931,
+      "sha256": "513f92e048df3a7129691f0140b92514689882036120e027a36304ee83a02b32"
+    },
+    {
+      "path": "human2robot/object_annotation/pipeline_status.py",
+      "bytes": 576,
+      "sha256": "6deb76f72e2cd229f35a98819803c341dc02f39483b64ee485c9ec352dcb1a2b"
+    },
+    {
+      "path": "human2robot/object_annotation/flex_verify.py",
+      "bytes": 2403,
+      "sha256": "9bdad347cba31cf517452a15783676e004bd837aaa70654625b91fcefd93b2af"
+    },
+    {
+      "path": "human2robot/object_annotation/validate_geometry_outputs.py",
+      "bytes": 4484,
+      "sha256": "adad9cdd772ad9e990fe20f7a5ed4c754d8f855b50c4bed77c1a0f8beec43005"
+    },
+    {
+      "path": "human2robot/object_annotation/unified_multimodal.py",
+      "bytes": 18367,
+      "sha256": "8b2cee6dec0f30ca4810c2252811fc736304549ae0b53b451c7f4edec8632aa1"
+    },
+    {
+      "path": "human2robot/object_annotation/audit_multimodal.py",
+      "bytes": 2757,
+      "sha256": "25c0f43bfa20f9d3eecf6a8784977d4d800c5c79f0c98bbd258f4ff5f77a2489"
+    },
+    {
+      "path": "human2robot/v2/run_hamer_mesh.py",
+      "bytes": 5168,
+      "sha256": "d5ebd8c4e0156c74f367e0b617df19fe1367572deebff68cc6d9a78f047fb545"
+    },
+    {
+      "path": "human2robot/v2/run_mediapipe_hand.py",
+      "bytes": 9725,
+      "sha256": "124296161fe1d644ff55fa92ea916f31c7ec34c64281bfcbeb5c84eef2b5da4d"
+    },
+    {
+      "path": "human2robot/v2/run_hamer_mesh_fast.py",
+      "bytes": 6019,
+      "sha256": "91219f256ceb756914f07efe79fa353a0ed6f122202dc3caab0965a8923f60e5"
+    },
+    {
+      "path": "human2robot/v2/annotate.py",
+      "bytes": 13108,
+      "sha256": "f8f81e7f40e4f96dd1aae0ecd30774d92eb516d4753867e43ae0dc7d382ae716"
+    },
+    {
+      "path": "human2robot/v2/review_gate.py",
+      "bytes": 1072,
+      "sha256": "a0a786beafdfb69b08a18420434ec0bfc0bbef72b74df544fa33774a239e9fe3"
+    },
+    {
+      "path": "human2robot/v2/__init__.py",
+      "bytes": 74,
+      "sha256": "50532d7116c68a095b5f55a931efca22ba8450aae577a37449db302fb0f63d3e"
+    },
+    {
+      "path": "human2robot/v2/run_exact_annotation_jobs.py",
+      "bytes": 22063,
+      "sha256": "a70521ada561552449a658e05e3e9c435818e23c304f4f49602a364ad6ea1678"
+    },
+    {
+      "path": "human2robot/v2/surface_renderer.py",
+      "bytes": 2758,
+      "sha256": "6c513138123517b0cb995dff5e721281085f9020c62d57a8d27ed5236f742b6e"
+    },
+    {
+      "path": "human2robot/hand_mesh/render.py",
+      "bytes": 4083,
+      "sha256": "2d246c70b5ab33dcb1be7680af436626b104d4c96d8560132a1340313803cd14"
+    },
+    {
+      "path": "human2robot/hand_mesh/quality.py",
+      "bytes": 1440,
+      "sha256": "d25ff5ad21ca02d0cdddedcce0446806212f2bcca55bc272e8560944dc61f03c"
+    },
+    {
+      "path": "human2robot/hand_mesh/replay.py",
+      "bytes": 2204,
+      "sha256": "3ce17b884b6d1c1464099621f5cce1aefdf95ab099e66a706ba76c9bcda4d175"
+    },
+    {
+      "path": "human2robot/hand_mesh/finalize.py",
+      "bytes": 9173,
+      "sha256": "34ff027b97801282ac5389b2ce56c55943d05b38dc62527f4816137e0abbdf75"
+    },
+    {
+      "path": "human2robot/hand_mesh/__init__.py",
+      "bytes": 67,
+      "sha256": "0100e39258759edb1a11523d06a66aef455c085ed6730daf3d2392cbd7be5ee3"
+    },
+    {
+      "path": "human2robot/hand_mesh/infer.py",
+      "bytes": 12400,
+      "sha256": "09aa3c6da9df1cd306f162ea1cfa16220709903904fba9eb7407fe866f11c1c7"
+    },
+    {
+      "path": "human2robot/hand_mesh/video.py",
+      "bytes": 2167,
+      "sha256": "ff99b8e77f21fc4d51200712457964b977ad66af0f8cdc41e857f3762d5d70f9"
+    },
+    {
+      "path": "human2robot/hand_mesh/identity.py",
+      "bytes": 3968,
+      "sha256": "0fd32a9fe3fc7e9967700420d045927bcaa0ec01a633bcbe0b3457bc794930a0"
+    },
+    {
+      "path": "human2robot/retarget_cloth/run_preview.py",
+      "bytes": 18971,
+      "sha256": "088231775bdd67324e35bf04922097d6586fe6081950bedd758099a322f1ce07"
+    },
+    {
+      "path": "human2robot/retarget_cloth/composite_source.py",
+      "bytes": 17238,
+      "sha256": "2904aabe6702887857596b771b95b862b59c3e107d1573d4862cece5dfaf904d"
+    },
+    {
+      "path": "human2robot/retarget_cloth/pilot_cpu_masks.py",
+      "bytes": 3821,
+      "sha256": "a87cb9f7e28b9be2455f344066662be761bac1d217a6c56d6d287778a9a9cb95"
+    },
+    {
+      "path": "human2robot/retarget_cloth/build_composite_video.py",
+      "bytes": 5193,
+      "sha256": "1d155675a2a49e62d3e28f045ff67f2a16fbe5e81d504775f25be845b43f9cd1"
+    },
+    {
+      "path": "human2robot/retarget_cloth/repair_masks.py",
+      "bytes": 4397,
+      "sha256": "107af9137b39e2885180160da1d47003c730d16aabda9f7f28281c485b44a2a6"
+    },
+    {
+      "path": "human2robot/retarget_cloth/stabilize_robot.py",
+      "bytes": 7380,
+      "sha256": "301fa9b04cbfa27cf84d7153a68da8add54c590affb840c18c513339617f847a"
+    },
+    {
+      "path": "human2robot/retarget_cloth/finish_repair.py",
+      "bytes": 2464,
+      "sha256": "d8310c2ef0c7cdce8e359162356e86efcb3bfcb27aa45aa4b760938344a17cc1"
+    },
+    {
+      "path": "human2robot/retarget_cloth/align_contact.py",
+      "bytes": 11732,
+      "sha256": "923b42307b97c007fd40297d893fef9a0ead9a3db9fb34a2027690580f2df26c"
+    },
+    {
+      "path": "human2robot/retarget_cloth/refine_contact_ik.py",
+      "bytes": 5441,
+      "sha256": "fae88485b9baa859b97615848de4e5daf2d0e4ea8b99102b2890611381778774"
+    },
+    {
+      "path": "human2robot/retarget_cloth/audit_temporal_full.py",
+      "bytes": 3160,
+      "sha256": "e17510ffc6103b3162e4c831bc156a538dddf29cab213b7dad9b554904b872f0"
+    },
+    {
+      "path": "human2robot/retarget_cloth/__init__.py",
+      "bytes": 73,
+      "sha256": "db412be50468ab4bfe4cf95ad29297b92bc018cabc35eb375570fe38a1f05382"
+    },
+    {
+      "path": "human2robot/retarget_cloth/validate_preview.py",
+      "bytes": 7518,
+      "sha256": "f82ed14b0e249676900233bd20975c49945dae027f511a01d565b5e6cf52811e"
+    },
+    {
+      "path": "human2robot/retarget_cloth/segment_human.py",
+      "bytes": 3485,
+      "sha256": "7cc33649643fb5c4f796d629679fda01bb5feb250ed7f9a19c943e1dd5a33cb3"
+    },
+    {
+      "path": "human2robot/retarget_cloth/propagate_human.py",
+      "bytes": 3872,
+      "sha256": "336a3ea12e5e0dc5339f310df44e0c4d808f03eaa3351f5f5f4837d5ee35967c"
+    },
+    {
+      "path": "human2robot/retarget_cloth/validate_continuous.py",
+      "bytes": 3479,
+      "sha256": "98db905ebed782642adf4fed999a156144114850af305c7f535dcf26e0d1d3cc"
+    },
+    {
+      "path": "human2robot/retarget_cloth/fit_contact_base.py",
+      "bytes": 2834,
+      "sha256": "7a4ef5acabe2918065cb75cfb3d8c115cbb161cb0528ab1eb3d138efa46a82b7"
+    },
+    {
+      "path": "human2robot/retarget_cloth/validate_contact_trial.py",
+      "bytes": 3144,
+      "sha256": "740c76d37e3c2c11dd5c8ee1faabd19c23f3758df9edf1b763f75ad38234f105"
+    },
+    {
+      "path": "human2robot/retarget_cloth/temporal_removal.py",
+      "bytes": 9523,
+      "sha256": "48db672912cd23de6f59f6af619957dfc449c760371af14a910d61f10ef46bc3"
+    },
+    {
+      "path": "human2robot/retarget_cloth/audit_temporal_video.py",
+      "bytes": 4526,
+      "sha256": "d2ac6c95ae9fab0c939aa175b94a402cd30fe8322159610ea6d480eb052dffe4"
+    },
+    {
+      "path": "human2robot/h2r/vision.py",
+      "bytes": 7590,
+      "sha256": "5142e759ee1c0208e19f8e02f77425e71639fd883fec2f5ce358d04b690f9555"
+    },
+    {
+      "path": "human2robot/h2r/__init__.py",
+      "bytes": 109,
+      "sha256": "3e94c0405b9fb9cf34dc0f38a300b1a01759d16e3bab7c33d6bd1ebe1b2fb957"
+    },
+    {
+      "path": "human2robot/h2r/export.py",
+      "bytes": 4240,
+      "sha256": "b908e323c98aea94622253e5d6c30ea987e47578dce6954cc7768cd59018f575"
+    },
+    {
+      "path": "human2robot/h2r/pipeline.py",
+      "bytes": 6888,
+      "sha256": "6ade529ea94e003acf16e815e43636dace56db077e5f6d4610026853d2d1967f"
+    },
+    {
+      "path": "human2robot/h2r/fixtures.py",
+      "bytes": 3735,
+      "sha256": "3f6d26a3197f715a0f344e844ec633a2b31ce7b8d4b3a5182f1bf4ecba6d51e2"
+    },
+    {
+      "path": "human2robot/h2r/schema.py",
+      "bytes": 4066,
+      "sha256": "c4e01fd4c916bad6cd085f941ab4478a91512268bb21b620ac1688fb525ea89b"
+    },
+    {
+      "path": "human2robot/h2r/repair.py",
+      "bytes": 3570,
+      "sha256": "b007f3a721823952eb83f76327331fa3101ef06b75fccffaf03ca080a36ec680"
+    },
+    {
+      "path": "human2robot/h2r/kinematics.py",
+      "bytes": 5765,
+      "sha256": "469b5d512a6470e7d724438ad599bd80ada7eb2c06162691a5b7ddabaea4d905"
+    },
+    {
+      "path": "human2robot/h2r/cli.py",
+      "bytes": 7046,
+      "sha256": "aedd4baf0585efd347426ba3781c2c86ee6fbba0dd82df9fbac1de5296f03b75"
+    },
+    {
+      "path": "human2robot/h2r/geometry.py",
+      "bytes": 2682,
+      "sha256": "3ae24f3329963e493c79275235d9579c471b24b5e6102a192387bef4d7bb15d7"
+    },
+    {
+      "path": "tools/run.py",
+      "bytes": 9316,
+      "sha256": "5d1972b9045cbe5f55cfedd49b6bea71f76955d45ed185c4d645d451f001843f"
+    },
+    {
+      "path": "tools/preview_annotation.py",
+      "bytes": 1840,
+      "sha256": "390dcd83aa8602c663110b50f47f9a5e2642ab86c1ad1bc1eba2c14c3e92a89d"
+    },
+    {
+      "path": "tools/qc_unlabeled.py",
+      "bytes": 6961,
+      "sha256": "21ce57488d24cafc4af4f248643e9a4bf6ddc890568393e97c90f39fc8a62ed0"
+    },
+    {
+      "path": "tools/build_annotation_views.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/run_hamer_h100_job.sh",
+      "bytes": 2487,
+      "sha256": "5e5abb26eca81a08e484d3b83ce41eb09debca823434e39103e01bd85ef46b64"
+    },
+    {
+      "path": "tools/run_hamer_h100_offline_job.sh",
+      "bytes": 2990,
+      "sha256": "2298c5ce3ad372dfcd302394597a8006b53eb1bdb5d72a16716d39bb1b1e07dc"
+    },
+    {
+      "path": "tools/run_hamer_surface_job.sh",
+      "bytes": 1492,
+      "sha256": "867aae3ad9c549d1a8ea2d8b15fb741b57a9c047e917c5d97b2c82ec7770d997"
+    },
+    {
+      "path": "tools/run_object_annotation_job.sh",
+      "bytes": 3256,
+      "sha256": "6c7bbce69fe6529db1823d9bd281437038d3f7cdc832f09c66832ec23d4b88b8"
+    },
+    {
+      "path": "tools/run_object_edge_job.sh",
+      "bytes": 1293,
+      "sha256": "51e41e75a90594c5bec36d7bc629ec171cb0a364cd9020c683a718e2e19b41fd"
+    },
+    {
+      "path": "tools/run_cloth_pose_job.sh",
+      "bytes": 1344,
+      "sha256": "45dfb57bdf240939fb93f98eb85b87b349563c16139af38df4e30d42381956a0"
+    },
+    {
+      "path": "tools/prepare_flexgemm_compat.py",
+      "bytes": 2276,
+      "sha256": "b478cb91e7b185173f941fc62adba319ef232041fa5dd24b44acc7ed1e71230b"
+    },
+    {
+      "path": "tools/run_unified_diagnostic.sh",
+      "bytes": 581,
+      "sha256": "7c13706fbb4c6e1b80162adffd4f78fba1469a7351351c9eee607ef28f5c0ac3"
+    },
+    {
+      "path": "tools/batch30_select_remote.py",
+      "bytes": 2141,
+      "sha256": "0c19834ac4951c9c0fcdcd74993d9aa115d859be68d974ce467807ca02c0215a"
+    },
+    {
+      "path": "tools/run_batch30_depth.sh",
+      "bytes": 593,
+      "sha256": "3243c264ed5195fd33ae72c1ac92c0c1aefb7962f471d000134c78b818ff6b98"
+    },
+    {
+      "path": "tools/batch30_repair_time.py",
+      "bytes": 2416,
+      "sha256": "704830f547b099bd35e276595c6bcfde635efb57094860ed66ff5fa3d2f593fe"
+    },
+    {
+      "path": "tools/run_batch30_sam.sh",
+      "bytes": 704,
+      "sha256": "bd0a804782d59fc5b75d02b68646ecc43d9516a4e10c0eb475821e1f382e08ba"
+    },
+    {
+      "path": "tools/run_batch30_sam_parallel.sh",
+      "bytes": 883,
+      "sha256": "70bd5c4227dcb4f35e275b91b26f666fa29c6e6e6327ba8e6ce9507d877c6fa0"
+    },
+    {
+      "path": "tools/batch30_package_remote.py",
+      "bytes": 2091,
+      "sha256": "d661c89531e6ea5e2eb283d83e3eee7ec001d029431f8bd8558862155bff2a60"
+    },
+    {
+      "path": "tools/run_batch30_sam_repair.sh",
+      "bytes": 1955,
+      "sha256": "c346b1d93e3d96d70015e4316ba714bf759a933d8f5e2fe5eccc8316004ab149"
+    },
+    {
+      "path": "tools/run_batch30_sam_retry.sh",
+      "bytes": 1948,
+      "sha256": "007d6fa03bd4ba7bfd6c334a2effdb6b8e249de093973e25a48e6d358836f781"
+    },
+    {
+      "path": "tools/build_four_layer_results.py",
+      "bytes": 12248,
+      "sha256": "6c59c43ca4bb8e2bf185befb7c2ae1e11266bf7d9af45b351ac1ab5191ea4d62"
+    },
+    {
+      "path": "tools/build_real_result.py",
+      "bytes": 9961,
+      "sha256": "0933e2d98bad21386819c756cd912571a3016617ec51a3290ad814b392c7ccbd"
+    },
+    {
+      "path": "tools/split_annotation_views.py",
+      "bytes": 6862,
+      "sha256": "e94b979bfbb58c8c24192e721c56d1308cdd9fed5b157e0c7810d16c99a3696f"
+    },
+    {
+      "path": "tools/run_shared_hamer.sh",
+      "bytes": 230,
+      "sha256": "95b6f5445b7a07621b134db77d4557b013671b351ba0b544857a4ba697e3d900"
+    },
+    {
+      "path": "tools/run_hamer_h100_fast_job.sh",
+      "bytes": 3022,
+      "sha256": "08293099ecf3d5e5d2ef555e19f47d1982a53a39f4b7c218efda276084624f63"
+    },
+    {
+      "path": "tools/run_hamer_h100_fast_egoverse_job.sh",
+      "bytes": 228,
+      "sha256": "5d225240407150347fbb55bc8cec58bc7c91daad35729ddea4452b76a4ccdcb7"
+    },
+    {
+      "path": "tools/run_cloth_depth_job.sh",
+      "bytes": 2181,
+      "sha256": "12bbe9301514c698b03e274c55f15dddf54739385111288e9afb61406a567e8c"
+    },
+    {
+      "path": "tools/download_moge_remote.py",
+      "bytes": 1701,
+      "sha256": "107d9cbdfa2cdbf2e66cf0498ad88e78c705a698cb72adf0dd22cae38a3c9604"
+    },
+    {
+      "path": "tools/run_human_removal_job.sh",
+      "bytes": 414,
+      "sha256": "85503fee8e6786d2a8d7db38d4715934b7fa0059eccb395be89ae36979234a6b"
+    },
+    {
+      "path": "tools/extract_unified_pilot.py",
+      "bytes": 3382,
+      "sha256": "be1a110eb2c244736c23440d75f12d744b07fd51818a8d2ceb9f649d5d93b0a5"
+    },
+    {
+      "path": "tools/run_unified_multimodal_job.sh",
+      "bytes": 877,
+      "sha256": "8a10bcf47b991db980d243f4d2e9b7627769429e249acd33212cf648fc2096b2"
+    },
+    {
+      "path": "tools/monitor_unified_multimodal.py",
+      "bytes": 2772,
+      "sha256": "5eba7b4df960aa790205cbf08efe461138623626b5ff88b24c4c5b12f7e4c1f6"
+    },
+    {
+      "path": "tools/diagnose_unified_sam.py",
+      "bytes": 2189,
+      "sha256": "728498707aa65798b2a5b070fd8462e0ab356b3a0a2e5dc38c062c3aaf76dcd0"
+    },
+    {
+      "path": "tools/package_multimodal_outputs.py",
+      "bytes": 2486,
+      "sha256": "38bfd00153b2cc2f27301cb61a54609f573e09b4b6d8b9c9d1fd84bde1f729a5"
+    },
+    {
+      "path": "tools/finish_multimodal_package.py",
+      "bytes": 698,
+      "sha256": "8a2ce070a4ab00e44ea3af7d1efdc73d3ff8a6dbe2d16f7b1fce23751febb649"
+    },
+    {
+      "path": "tools/batch30_extract_remote.py",
+      "bytes": 6487,
+      "sha256": "b0950826ed1076174f2380757a92ac7d5f6339457954c8471d4aee1002a8ebcf"
+    },
+    {
+      "path": "tools/run_batch30_depth_parallel.sh",
+      "bytes": 749,
+      "sha256": "66d205b614eb6238fd4e4fc14e215c669fc6407f25d7189e642b7d07ae764bfb"
+    },
+    {
+      "path": "docs/HAMER_RUNBOOK.md",
+      "bytes": 1408,
+      "sha256": "92512ffd82ec0b70f43c233045fcdbbae71b5d1767ff5df4240dd7c3412fba65"
+    },
+    {
+      "path": "docs/OBJECT_POSE_AND_EGOMATRIX.md",
+      "bytes": 10268,
+      "sha256": "72ca9e81a1b9b99e3124dae9ad2079fa7a5ba9fa638a94613ac123b4ba788a89"
+    },
+    {
+      "path": "docs/ROBOT_SOURCE_COMPOSITE.md",
+      "bytes": 3116,
+      "sha256": "338a94892b5d9e85766a7a300701c6a9da6a99e57f084259646eddc8417af204"
+    },
+    {
+      "path": "docs/HUMAN_VIDEO_BLIND_QC_PLAN.md",
+      "bytes": 4382,
+      "sha256": "8d1b15f1ee81ca9bd363cef1626bd788913650d38c1cd139e0daa680585bb910"
+    },
+    {
+      "path": "docs/HAND_MESH.md",
+      "bytes": 4461,
+      "sha256": "acf9f4a8e18dff7c71166a34fe66ed5e6c27af726bf1de7d5013bdb2c58353d0"
+    },
+    {
+      "path": "docs/OBJECT_ANNOTATION_RUN.md",
+      "bytes": 4089,
+      "sha256": "7ff57a50f6192216550fb21bd422965ecff25e8acd152af2559469d96cd4ce82"
+    },
+    {
+      "path": "local_annotation_lab/app.js",
+      "bytes": 27410,
+      "sha256": "8ba7597ab7edac27b1efff8e1cfee1820f99784f2b3448c65baf25f89595d636"
+    },
+    {
+      "path": "local_annotation_lab/index.html",
+      "bytes": 9902,
+      "sha256": "1502af98e1751b87a0e0bdaed8577ed17b126781362e0bf431dbe54efd4cf854"
+    },
+    {
+      "path": "local_annotation_lab/publish_source_composite.py",
+      "bytes": 6976,
+      "sha256": "3868eb8a7018099a44fc352e111573637aaac52ddfdfbecd54cffd9617fea580"
+    },
+    {
+      "path": "tests/test_cloth_geometry.py",
+      "bytes": 1672,
+      "sha256": "925415a496c845f70ee3112d5d783cc612165f9bbd709741a1b5c803a43c316c"
+    },
+    {
+      "path": "tests/test_garment_proposal.py",
+      "bytes": 1307,
+      "sha256": "a09ddf49793cc60cb77fbd505a40d081695f9e40825e11724ac6cf3301c21241"
+    },
+    {
+      "path": "tests/test_temporal_removal.py",
+      "bytes": 2165,
+      "sha256": "b64acb930ab69704728797d314832a0387079d08ba9d0e46fc146fc0ade34b9f"
+    },
+    {
+      "path": "tests/test_sam3_compat.py",
+      "bytes": 1613,
+      "sha256": "3575ed021704d28fa1db1e621e9e3a02c132f6a48497eaf1f4d36c9541830952"
+    }
+  ]
+}

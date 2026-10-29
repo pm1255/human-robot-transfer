@@ -1,0 +1,230 @@
+{
+  "schema": "embodied-data-loop.model-assets.v1",
+  "hub_repository": "erwtwert/embodied-data-loop-models",
+  "github_repository": "https://github.com/pm1255/human-robot-transfer",
+  "verified_at": "2026-10-29",
+  "scope": "Pretrained third-party assets used by annotation and quality-control pipelines; no new end-to-end model is claimed.",
+  "assets": [
+    {
+      "component": "moge3",
+      "local_path": "models/moge-3-vitl/model.pt",
+      "hub_path": "moge-3-vitl/model.pt",
+      "bytes": 1481333394,
+      "sha256": "9b41b7b9f65ad80aab7ad686f5e9cc0d1fd33f1964022618dfbcd52fc1fb7925",
+      "license": "MIT",
+      "upstream": "https://huggingface.co/Ruicheng/moge-3-vitl/tree/184008f877d7ad1ad4c2cd2182a9bd1f63d0e5be",
+      "delivery": "mirror"
+    },
+    {
+      "component": "mediapipe",
+      "local_path": "models/mediapipe/hand_landmarker.task",
+      "hub_path": "mediapipe/hand_landmarker.task",
+      "bytes": 7819105,
+      "sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+      "license": "Apache-2.0",
+      "upstream": "https://ai.google.dev/edge/mediapipe/solutions/vision",
+      "delivery": "mirror"
+    },
+    {
+      "component": "mediapipe",
+      "local_path": "models/mediapipe/pose_landmarker_full.task",
+      "hub_path": "mediapipe/pose_landmarker_full.task",
+      "bytes": 9398198,
+      "sha256": "5134a3aad27a58b93da0088d431f366da362b44e3ccfbe3462b3827a839011b1",
+      "license": "Apache-2.0",
+      "upstream": "https://ai.google.dev/edge/mediapipe/solutions/vision",
+      "delivery": "mirror"
+    },
+    {
+      "component": "mediapipe",
+      "local_path": "models/mediapipe/efficientdet_lite0.tflite",
+      "hub_path": "mediapipe/efficientdet_lite0.tflite",
+      "bytes": 13836895,
+      "sha256": "40338edf5ec70d43e318b0a716a84d4564cd1802759a7a07170c7e43796dbf58",
+      "license": "Apache-2.0",
+      "upstream": "https://ai.google.dev/edge/mediapipe/solutions/vision",
+      "delivery": "mirror"
+    },
+    {
+      "component": "hamer",
+      "local_path": "models/hamer/hamer_ckpts/checkpoints/hamer.ckpt",
+      "hub_path": "hamer/hamer_ckpts/checkpoints/hamer.ckpt",
+      "bytes": 2689536166,
+      "sha256": "e5cc06f294d88a92dee24e603480aab04de532b49f0e08200804ee7d90e16f53",
+      "license": "MIT",
+      "upstream": "https://github.com/geopavlakos/hamer",
+      "delivery": "mirror"
+    },
+    {
+      "component": "hamer",
+      "local_path": "models/hamer/hamer_ckpts/model_config.yaml",
+      "hub_path": "hamer/hamer_ckpts/model_config.yaml",
+      "bytes": 1424,
+      "sha256": "85f824989f0ccb1e3ff1a72064943be3bf2b555c6759ae06dba209842db97200",
+      "license": "MIT",
+      "upstream": "https://github.com/geopavlakos/hamer",
+      "delivery": "mirror"
+    },
+    {
+      "component": "hamer",
+      "local_path": "models/hamer/_DATA/data/mano_mean_params.npz",
+      "hub_path": "hamer/_DATA/data/mano_mean_params.npz",
+      "bytes": 1178,
+      "sha256": "efc0ec58e4a5cef78f3abfb4e8f91623b8950be9eff8b8e0dbb0d036ebc63988",
+      "license": "MIT",
+      "upstream": "https://github.com/geopavlakos/hamer",
+      "delivery": "mirror"
+    },
+    {
+      "component": "mano",
+      "local_path": "models/hamer/_DATA/data/mano/MANO_RIGHT.pkl",
+      "hub_path": null,
+      "bytes": 3821356,
+      "sha256": "45d60aa3b27ef9107a7afd4e00808f307fd91111e1cfa35afd5c4a62de264767",
+      "license": "MANO license; obtain separately",
+      "upstream": "https://mano.is.tue.mpg.de/",
+      "delivery": "manual"
+    },
+    {
+      "component": "foundationpose",
+      "local_path": "vendor/FoundationPose-main/weights/2023-10-28-18-33-37/model_best.pth",
+      "hub_path": "foundationpose/2023-10-28-18-33-37/model_best.pth",
+      "bytes": 68220109,
+      "sha256": "774700586ddc435d408fc01c9809c43e151232936369dfbea0f0f964ba471d60",
+      "license": "NVIDIA Source Code License (non-commercial)",
+      "upstream": "https://github.com/NVlabs/FoundationPose",
+      "delivery": "mirror"
+    },
+    {
+      "component": "foundationpose",
+      "local_path": "vendor/FoundationPose-main/weights/2024-01-11-20-02-45/model_best.pth",
+      "hub_path": "foundationpose/2024-01-11-20-02-45/model_best.pth",
+      "bytes": 190229389,
+      "sha256": "81924d384bf5c26c646ee4783104982ae3d1e049c181c36641b6a7aeae494c26",
+      "license": "NVIDIA Source Code License (non-commercial)",
+      "upstream": "https://github.com/NVlabs/FoundationPose",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/sam3.1_multiplex.pt",
+      "hub_path": "sam3.1/sam3.1_multiplex.pt",
+      "bytes": 3502755717,
+      "sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    },
+    {
+      "component": "foundationpose",
+      "local_path": "vendor/FoundationPose-main/weights/2023-10-28-18-33-37/config.yml",
+      "hub_path": "foundationpose/2023-10-28-18-33-37/config.yml",
+      "bytes": 708,
+      "sha256": "28a6ba94a33230ee5fc3c51939486281578b0972542bd9e38ca6123e75605686",
+      "license": "NVIDIA Source Code License (non-commercial)",
+      "upstream": "https://github.com/NVlabs/FoundationPose",
+      "delivery": "mirror"
+    },
+    {
+      "component": "foundationpose",
+      "local_path": "vendor/FoundationPose-main/weights/2024-01-11-20-02-45/config.yml",
+      "hub_path": "foundationpose/2024-01-11-20-02-45/config.yml",
+      "bytes": 778,
+      "sha256": "a79db4de3b95885dd5ae86833b37b8698a75dad81e87d1086cd50b2fcd8dda3f",
+      "license": "NVIDIA Source Code License (non-commercial)",
+      "upstream": "https://github.com/NVlabs/FoundationPose",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/merges.txt",
+      "hub_path": "sam3.1/merges.txt",
+      "bytes": 524619,
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/special_tokens_map.json",
+      "hub_path": "sam3.1/special_tokens_map.json",
+      "bytes": 588,
+      "sha256": "2cdb3b8331a60c92fc1e55a13e9fd61fd2293c5a51275fdcccd62b780052530e",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/vocab.json",
+      "hub_path": "sam3.1/vocab.json",
+      "bytes": 862328,
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/config.json",
+      "hub_path": "sam3.1/config.json",
+      "bytes": 25843,
+      "sha256": "4616385e4b21f2e5e22c875b65679185cbccfa95de42542b9166f7dc3d57160f",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/tokenizer_config.json",
+      "hub_path": "sam3.1/tokenizer_config.json",
+      "bytes": 799,
+      "sha256": "39670ad98457fe8f14ca59f6bb74591e9fc850974380a63993e5b8ffc865baa2",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/processor_config.json",
+      "hub_path": "sam3.1/processor_config.json",
+      "bytes": 1712,
+      "sha256": "6420cf2671fa9309ea95bc0144a8b9861666d1c5f43c8db09e410dacda974fce",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    },
+    {
+      "component": "sam31",
+      "local_path": "models/sam3.1/tokenizer.json",
+      "hub_path": "sam3.1/tokenizer.json",
+      "bytes": 3642073,
+      "sha256": "6d9109cc838977f3ca94a379eec36aecc7c807e1785cd729660ca2fc0171fb35",
+      "license": "SAM License",
+      "upstream": "https://huggingface.co/facebook/sam3.1",
+      "delivery": "mirror"
+    }
+  ],
+  "external_components": [
+    {
+      "component": "vace",
+      "purpose": "Optional robot-to-human video editing",
+      "repository": "Wan-AI/Wan2.1-VACE-1.3B",
+      "revision": "574e6a744642ce3bee319afc31496b88bde8aac4",
+      "license": "Apache-2.0",
+      "delivery": "upstream",
+      "script": "scripts/setup_vace.sh"
+    },
+    {
+      "component": "robot_assets",
+      "purpose": "Optional Aloha/G1 rendering and retargeting",
+      "repositories": [
+        "TianxingChen/RoboTwin2.0",
+        "https://github.com/unitreerobotics/unitree_mujoco"
+      ],
+      "delivery": "upstream",
+      "documentation": "docs/QUICKSTART.md"
+    }
+  ]
+}

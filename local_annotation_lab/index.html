@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Ego · 真机 · UMI 统一标注工作台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23176c70'/%3E%3Cpath d='M12 12h16v16H12z' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='20' cy='20' r='3' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=unified-domains-v1">
+  <script src="app.js?v=egosuite30-v2" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">H ↔ R</span><span>跨数据集标注<span class="brand-caption">ANNOTATION LAB</span></span></a>
+    <nav aria-label="页面导航"><a href="#annotations">全部标注</a><a href="#semantic-review">片段复核</a><a href="#dataset-quality">数据集汇总</a></nav>
+  </header>
+  <main id="top">
+    <section class="selection" aria-labelledby="page-title">
+      <div class="heading-row"><div><p class="eyebrow">HUMAN EGO / REAL ROBOT / UMI</p><h1 id="page-title">统一标注工作台</h1></div><span class="subtle" id="sample-count">读取中</span></div>
+      <div class="selectors"><label>数据集<select id="dataset" disabled aria-label="选择数据集"></select></label><label class="sample-select">视频样本<select id="sample" disabled aria-label="选择样本"></select></label><div class="selection-meta"><span class="badge neutral" id="domain-badge">人类 Ego</span><span id="sample-meta"></span></div></div>
+      <p id="task-instruction" class="subtle resource-note"></p><p class="summary-notice" id="page-status" role="status">正在读取标注资源…</p>
+      <p class="subtle resource-note">同一样本、同一时间基准，每种标注一个视频。<a href="http://127.0.0.1:16069/" target="_blank" rel="noopener">本批 30 条 · 选样、标注与质检进度 ↗</a> · <a href="batch30/report_summary.html">本批结果与限制 ↗</a></p>
+      <p class="subtle resource-note"><a href="#confidence-review">自动可信度 ↓</a> · <a href="batch30/report_summary.html">本轮多模态标注与质检 ↗</a> · <a href="multimodal/vla_annotation_map.html">VLA-Delta 标注对应与使用条件 ↗</a></p>
+    </section>
+
+    <section id="annotations" aria-labelledby="annotations-title">
+      <div class="heading-row annotation-heading"><div><p class="eyebrow">01 / ANNOTATIONS</p><h2 id="annotations-title">原视频与全部标注</h2></div><span class="subtle">独立视频 · 同步对照</span></div>
+      <nav id="layer-links" class="layer-links" aria-label="标注类型"></nav>
+      <div class="playback-dock">
+      <div class="playback" aria-label="同步播放控制">
+        <button id="play" class="primary" disabled aria-label="同步播放">▶ 同步播放</button>
+        <div class="frame-controls"><button id="previous" class="icon-button" disabled aria-label="上一帧">‹</button><button id="next" class="icon-button" disabled aria-label="下一帧">›</button></div>
+        <label class="sr-only" for="seek">同步视频帧</label><input id="seek" type="range" min="0" max="4833" value="0" step="1" disabled>
+        <output id="time">00:00.00 / 02:41.13</output>
+        <label class="speed-label"><span class="sr-only">播放速度</span><select id="speed" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+      </div>
+      <div class="timeline-meta"><span id="frame">第 1 / 4834 帧</span><span>统一控制全部视频；也可在卡片中单独播放。</span></div>
+      <div class="frame-status-strip"><span id="hand-frame-status">手型状态读取中</span><span id="pose-frame-status">位姿状态读取中</span><span id="semantic-frame-status">片段语义读取中</span><span id="robot-frame-status"></span></div>
+              <form id="frame-jump-form" class="frame-jump">
+          <label for="frame-input">帧号（从 0 开始）</label><input id="frame-input" type="number" min="0" step="1" value="600" required>
+          <button class="primary" type="submit">全部视频跳转</button><button id="geometry-rejected" class="text-button" type="button" disabled>下一个拒绝帧</button>
+        </form>
+      <p id="playback-status" role="status" class="playback-message" hidden></p>
+      </div>
+      <article id="cleaner-review" class="coverage-card" hidden>
+        <div class="heading-row"><h3>EgoSuite 自动质检</h3><span class="badge review">uni_cleaner_plus · 无人工真值</span></div>
+        <p id="cleaner-conclusion" role="status"></p>
+        <div class="table-wrap"><table><thead><tr><th>证据</th><th>结果</th><th>含义</th></tr></thead><tbody id="cleaner-rows"></tbody></table></div>
+        <p class="subtle resource-note">规则分和模型间一致性不等于正确概率。图像对齐只抽检 24 帧 / 相机；未测运动时延，未验证物体位姿、分割和语义正确性。</p>
+        <div class="resource-links"><a id="cleaner-download">完整质检 JSON ↗</a><a id="time-audit-download">源时间轴检查 ↗</a></div>
+      </article>
+      <article id="confidence-review" class="coverage-card">
+        <div class="heading-row"><h3>自动可信度 · 时序证据</h3><span class="badge review">未校准 · 非正确概率</span></div>
+        <p id="confidence-summary" class="subtle resource-note" role="status"></p>
+        <p id="confidence-frame" class="resource-note"></p>
+        <div class="table-wrap confidence-table"><table><thead><tr><th>对象</th><th>一致性分</th><th>结论</th><th>依据 / 限制</th></tr></thead><tbody id="confidence-rows"></tbody></table></div>
+        <p id="confidence-other" class="subtle resource-note"></p>
+        <div class="resource-links"><button id="confidence-next" type="button" class="text-button" disabled>跳到低分 / 缺失帧</button><a id="confidence-download" hidden>逐帧评分 JSON ↗</a><a href="batch30/report_summary.html">本批评分方法与结果 ↗</a><a href="http://127.0.0.1:16069/" target="_blank" rel="noopener">评分进度 ↗</a></div>
+      </article>
+      <div id="cards" class="annotation-grid"></div>
+      <article id="semantic-review" class="coverage-card">
+        <div class="heading-row"><h3>片段语义 · 随时间切换</h3><span class="badge review">新分段 · 待复核</span></div>
+        <p id="semantic-summary" class="subtle resource-note" role="status">正在读取动作片段…</p>
+        <canvas id="semantic-timeline" width="1400" height="40" aria-label="语义动作时间带；可用片段选择器定位"></canvas>
+        <div class="frame-jump"><label for="semantic-segment">选择动作片段</label><select id="semantic-segment" disabled></select><button id="semantic-prev" class="text-button" disabled>上一片段</button><button id="semantic-next" class="text-button" disabled>下一片段</button></div>
+        <p id="semantic-detail" class="frame-detail"></p>
+        <details class="geometry-details"><summary>全部片段与标注来源</summary><p id="semantic-protocol" class="subtle resource-note"></p><div class="table-wrap semantic-table"><table><thead><tr><th>片段 / 演示</th><th>起止时间</th><th>当前动作</th><th>查看</th></tr></thead><tbody id="semantic-rows"></tbody></table></div><a id="semantic-download" href="semantic/semantic_segments.json" class="card-link">下载片段语义 JSON ↗</a></details>
+      </article>
+      <article class="coverage-card" id="segment-editor">
+ <div class="heading-row"><h3>片段复核与修改</h3><a href="batch30/report_summary.html">本批统一规范与自动质检 ↗</a></div>
+ <p class="subtle resource-note">草稿保存在当前浏览器，可导出继续处理。预渲染语义视频对应发布版本；修改后以时间带和下方文字为准。当前为未校准初标；自动评分用于筛选候选，不能据此宣称已验收。</p>
+ <form id="edit-form" class="edit-grid">
+ <label>起始帧（含）<input id="edit-start" type="number" min="0" required></label><label>结束帧（不含）<input id="edit-end" type="number" min="1" required></label>
+ <label>动作阶段<select id="edit-phase"></select></label><label>动作动词<select id="edit-verb"></select></label>
+ <label>操作物体<input id="edit-object" required></label><label>目标物体<input id="edit-target" required></label>
+ <label class="wide">片段描述<input id="edit-label" required></label><label>操作前状态<input id="edit-before" required></label><label>操作后状态<input id="edit-after" required></label>
+ <label class="wide">复核备注<input id="edit-note" placeholder="记录边界证据、遮挡或需复查的问题"></label>
+ <div class="wide editor-actions"><button class="primary" type="submit">保存当前片段草稿</button><button id="segment-split" type="button">在当前帧拆分</button><button id="segment-merge" type="button">与下一段合并</button><button id="export-semantics" type="button">导出语义 JSON</button><button id="draft-reset" type="button">恢复发布版</button></div>
+ </form><p id="edit-status" role="status" class="subtle resource-note"></p>
+ <div id="export-panel" hidden><p><a id="export-file" download>下载当前语义 JSON ↗</a> · <button type="button" class="text-button" id="copy-export">复制完整 JSON</button></p><label for="export-json" class="sr-only">导出的语义 JSON</label><textarea id="export-json" readonly class="evidence" style="width:100%;height:220px"></textarea></div>
+ <details><summary>当前片段的状态变化与依据</summary><pre id="segment-evidence" class="evidence"></pre></details>
+ </article>
+ <article id="native-review" class="coverage-card" hidden><h3>原生记录与质检证据</h3><p id="native-summary"></p><p id="native-current"></p><div id="native-links" class="resource-links"></div><pre id="native-qc" class="evidence"></pre></article>
+ <article id="multimodal-review" class="coverage-card" hidden>
+  <div class="heading-row"><h3>物体标注 · 逐帧复核</h3><span class="badge review">初标 · 未获训练准入</span></div>
+  <p id="multimodal-findings" class="subtle resource-note"></p>
+  <p id="multimodal-frame" class="frame-detail" role="status"></p>
+  <button id="next-object-issue" type="button" class="text-button" disabled>跳到下一个轮廓变化 / 缺失提示</button>
+  <p class="subtle resource-note">自动提示用于定位，不能替代准确率验收。可见对象未检出、真实遮挡与实例切换需要结合原视频逐项确认。</p>
+ </article>
+ <noscript><p>请启用 JavaScript 以读取标注资源并播放视频。</p></noscript>
+    </section>
+
+    <section id="sample-quality" class="quality-section" aria-labelledby="sample-quality-title">
+      <div class="heading-row"><div><p class="eyebrow">02 / SAMPLE QUALITY</p><h2 id="sample-quality-title">当前样本质检</h2></div><span class="badge review">待复核</span></div>
+      <div class="quality-grid">
+        <article class="quality-card"><span class="subtle">资源与原生记录</span><h3>可查看，仍需复核</h3><p id="loose-quality"></p></article>
+        <article class="quality-card"><span class="subtle">精度与训练准入</span><h3>尚未完成验收</h3><p id="strict-quality"></p></article>
+      </div>
+      <div id="hand-coverage" class="coverage-card"><div class="heading-row"><h3>手型逐帧状态</h3><div class="legend"><span><i class="available-dot"></i>有输出</span><span><i class="review-dot"></i>需复核</span><span><i class="missing-dot"></i>未检测</span></div></div><canvas id="coverage" width="1200" height="40" aria-label="手型逐帧覆盖图，使用下方按钮跳转缺失或复核帧"></canvas><div class="coverage-bottom"><p id="coverage-summary"></p><div><button id="jump-missing" class="text-button">查看未检测帧</button><button id="jump-review" class="text-button">查看待复核帧</button></div></div></div>
+      <article id="geometry-review" class="coverage-card">
+        <div class="heading-row"><h3>衣物整体位姿 · 逐帧复核</h3><span class="badge review">刚体近似 · 非真值</span></div>
+        <p id="geometry-summary" class="subtle resource-note" role="status">正在读取位姿结果…</p>
+        <canvas id="geometry-timeline" width="1400" height="40" aria-label="位姿逐帧状态色带；可用下方帧号输入框跳转"></canvas>
+        <div id="geometry-legend" class="legend geometry-legend"></div>
+
+        <p id="geometry-frame-info" class="frame-detail">位姿逐帧记录读取中。</p>
+        <details class="geometry-details"><summary>查看位姿数量、尺度与使用边界</summary>
+          <div class="table-wrap"><table><thead><tr><th>状态</th><th>帧数</th><th>含义</th></tr></thead><tbody id="geometry-counts"></tbody></table></div>
+          <p class="subtle resource-note">逐帧掩码和深度保留可见形变；单个整体位姿不能描述布料每个点的运动。失败后的等待帧保留空位姿，不插值。没有布料点的连续对应、世界坐标轨迹或机器人控制动作。</p>
+          <p id="depth-quality-note" class="subtle resource-note"></p>
+          <div class="resource-links"><a href="geometry/pose6d.json">逐帧位姿与候选 ↗</a><a href="geometry/geometry_validation.json">几何质检明细 ↗</a><a href="OBJECT_POSE_AND_EGOMATRIX.md">方法与 EgoMatrix 参考范围 ↗</a></div>
+        </details>
+      </article>
+    </section>
+
+    <section id="dataset-quality" class="quality-section" aria-labelledby="dataset-quality-title">
+      <div class="heading-row"><div><p class="eyebrow">03 / DATASET OVERVIEW</p><h2 id="dataset-quality-title">数据集汇总</h2></div><span class="subtle">首批三类数据 · 同一语义规范</span></div>
+      <div class="metrics" id="metrics"></div>
+      <div class="table-wrap"><table><thead><tr><th>样本</th><th>已接入视频</th><th>宽松质检</th><th>严格质检</th><th>建议</th></tr></thead><tbody id="dataset-rows"></tbody></table></div>
+      <p class="subtle footnote">本页统计仅覆盖已接入样本。资源缺失不代表检测失败；未检测帧也不等于已确认漏检。</p>
+    </section>
+    <footer><div><a href="batch30/report_summary.html">三类各 10 条 · 结果报告 ↗</a><a href="unified/quality_plan.html">历史验收方案（含人工建议） ↗</a><a href="unified/taxonomy.json">统一语义词表 ↗</a></div><p>根据项目原有网页代码与共享记录重建 · 2026-10-20</p><div><a href="robot_repair_report_summary.md">机械臂连续性修复 ↗</a><a href="robot_composite_report_summary.md">原背景合成修复 ↗</a><a href="semantic_robot_report_summary.md">片段语义与双臂结果 ↗</a><a href="unified_report_summary.md">统一网页说明 ↗</a><a href="report_summary.md">手型结果与限制 ↗</a><a href="assets/multi_manifest.json">资源清单 ↗</a></div></footer>
+  </main>
+</body>
+</html>
